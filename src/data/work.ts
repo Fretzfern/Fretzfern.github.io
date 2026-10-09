@@ -391,8 +391,8 @@ export const reportGroups: ReportGroup[] = [
       {
         file: 'rank-tracker-visibility',
         title: 'From position 100 to the low 30s, and holding',
-        context: 'SE Ranking · Google Canada, Toronto',
-        shows: 'Average position over time for 116 tracked keywords, from a March 2025 baseline to October 2026.',
+        context: 'SE Ranking · Cloud Pharmacy, Google Canada (Toronto)',
+        shows: 'Average position over time for Cloud Pharmacy\'s 116 tracked keywords, from a March 2025 baseline to October 2026.',
         did: 'Keyword research, on-page fixes and link-building, then steady tracking to see which gains last.',
         result:
           'Average position moved from around 100 at baseline to 32 and has held since late 2025. Search visibility is 45 (+27), 43% of keywords are in the Top 10 (+9), and the traffic forecast is 19,977 (+5,806).',
@@ -465,7 +465,7 @@ export const reportGroups: ReportGroup[] = [
       {
         file: 'gsc-august-impressions',
         title: '300K impressions at average position 8.9',
-        context: 'Google Search Console · August 2026',
+        context: 'Google Search Console · Cloud Pharmacy, August 2026',
         shows: 'A month of Search Console data: clicks, impressions, click-through rate and average position.',
         did: 'I match titles, metadata and content to intent-driven queries and watch query-level changes.',
         result:
@@ -474,7 +474,7 @@ export const reportGroups: ReportGroup[] = [
       {
         file: 'gsc-and-ai-features',
         title: 'Showing up in AI-generated answers',
-        context: 'Google Search Console · Web and Generative AI features',
+        context: 'Google Search Console · Brown Coach Line, Web and Generative AI features',
         shows: 'Web performance for August 2026, with the new Generative AI features report below it.',
         did: 'I add Schema and answer-style content for GEO and AEO, then watch this report to see it work.',
         result:
@@ -483,7 +483,7 @@ export const reportGroups: ReportGroup[] = [
       {
         file: 'ga4-engagement-overview',
         title: '92% engagement and 202 conversions',
-        context: 'Google Analytics 4 · August 2026',
+        context: 'Google Analytics 4 · Cloud Pharmacy, August 2026',
         shows: 'The audience report for a month: sessions, users, views, engagement and conversions.',
         did: 'I set up GA4 and Tag Manager events so conversions are counted properly.',
         result: '1.8K sessions, 1.6K users and 4.7K views, with a 92.32% engagement rate and 202 conversions.',
@@ -491,7 +491,7 @@ export const reportGroups: ReportGroup[] = [
       {
         file: 'ga4-baseline',
         title: 'A baseline to build on',
-        context: 'Google Analytics 4 · Audience report',
+        context: 'Google Analytics 4 · Brown Coach Line',
         shows: '538 sessions and 509 users, with 15 conversions, a 36.43% engagement rate and 13 seconds of average engagement.',
         did: 'Conversion events are in place, so the funnel can be measured from day one.',
         result:
@@ -514,11 +514,11 @@ export const reportGroups: ReportGroup[] = [
       },
       {
         file: 'gbp-monthly-interactions',
-        title: 'Year-on-year profile interactions',
-        context: 'Google Business Profile · May and July 2026',
-        shows: 'Business Profile interactions for two months, each compared with the same month of 2025.',
+        title: 'Profile interactions across two clients',
+        context: 'Google Business Profile · Kratom Delivery Canada (May) and Travel Time Taxi (July) 2026',
+        shows: 'Business Profile interactions for two clients in two different months.',
         did: 'I keep the profile complete and track calls, website clicks and bookings.',
-        result: '356 interactions in May 2026 and 159 in July 2026, both up on the same month of 2025.',
+        result: '356 interactions for Kratom Delivery Canada in May 2026 and 159 for Travel Time Taxi in July 2026.',
       },
       {
         file: 'backlinks-citations',
