@@ -132,7 +132,7 @@ export default function ContactGrid() {
               </h2>
               <p className="cgrid__done-body">
                 {status.via === 'webhook'
-                  ? 'It is in my inbox and on my phone. You will hear back within one business day.'
+                  ? 'Your message is in my inbox. I will reply by email.'
                   : 'The message is laid out and addressed. Press send there and you will hear back within one business day.'}
               </p>
               <button type="button" className="cgrid__again" onClick={() => setStatus({ kind: 'idle' })}>

@@ -1,5 +1,5 @@
 import { ArrowUpRight } from '@/components/slab'
-import { CV_URL, WIX_PORTFOLIO, featuredSites, resultShots, sampleProjects } from '@/data/work'
+import { CV_URL, WIX_PORTFOLIO, featuredSites, reportGroups, resultShots, sampleProjects } from '@/data/work'
 import '@/styles/work.css'
 
 /** /portfolio: websites worked on, the full sample list, and result screenshots. */
@@ -50,6 +50,46 @@ export default function PortfolioView() {
             </li>
           ))}
         </ul>
+      </div>
+
+      <div className="wk__card">
+        <h2 className="wk__card-title">Reports and analytics</h2>
+        <p className="wk__p">
+          Screenshots from the tools I work in every day, each with what it shows, what I did, and the improvement.
+        </p>
+        {reportGroups.map((g) => (
+          <section className="wk__group" key={g.title} aria-label={g.title}>
+            <h3 className="wk__h3">{g.title}</h3>
+            <p className="wk__p">{g.lede}</p>
+            <ul className="wk__reports">
+              {g.items.map((r) => (
+                <li className="wk__report" key={r.file}>
+                  <img
+                    src={`/reports/${r.file}.png`}
+                    alt={`${r.title}: ${r.context}`}
+                    width={670}
+                    height={370}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div className="wk__report-body">
+                    <h4 className="wk__report-title">{r.title}</h4>
+                    <span className="wk__report-ctx">{r.context}</span>
+                    <p className="wk__p">
+                      <strong>What it shows.</strong> {r.shows}
+                    </p>
+                    <p className="wk__p">
+                      <strong>What I do.</strong> {r.did}
+                    </p>
+                    <p className="wk__p wk__p--result">
+                      <strong>The improvement.</strong> {r.result}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
       </div>
 
       <div className="wk__card">

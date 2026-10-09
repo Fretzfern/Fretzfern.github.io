@@ -89,3 +89,16 @@
 .wk__role-title { font-size: clamp(17px, 1.3vw, 22px); font-weight: 700; color: var(--navy); }
 .wk__role-years { font-size: 14px; font-weight: 600; color: var(--orange-ink); }
 .wk__role-co { font-size: 14px; color: var(--muted); margin: 2px 0 8px; }
+
+/* Reports and analytics */
+.wk__group { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+.wk__reports { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: 16px; }
+@media (min-width: 900px) { .wk__reports { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.wk__report { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: var(--paper); }
+.wk__report img { display: block; width: 100%; height: auto; background: #0b1120; }
+.wk__report-body { display: flex; flex-direction: column; gap: 6px; padding: 16px 18px 18px; }
+.wk__report-title { font-size: 17px; font-weight: 700; line-height: 1.25; color: var(--navy); }
+.wk__report-ctx { font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: var(--orange-ink); margin-bottom: 4px; }
+.wk__report .wk__p { font-size: 14px; line-height: 1.6; }
+.wk__report .wk__p strong { color: var(--navy); }
+.wk__p--result { border-top: 1px solid var(--line); padding-top: 8px; margin-top: 2px; }

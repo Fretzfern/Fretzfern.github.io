@@ -1,4 +1,4 @@
-import { roles } from '@/data/work'
+import { CV_URL, roles } from '@/data/work'
 import { profile } from '@/data/profile'
 import '@/styles/work.css'
 
@@ -18,6 +18,11 @@ export default function ExperienceView() {
           </a>
           .
         </p>
+        <div className="wk__actions">
+          <a className="wk__btn wk__btn--solid" href={CV_URL} target="_blank" rel="noopener noreferrer">
+            Download CV
+          </a>
+        </div>
       </header>
 
       <ol className="wk__timeline">

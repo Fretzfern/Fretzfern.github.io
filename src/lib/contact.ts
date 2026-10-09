@@ -3,19 +3,22 @@ import { profile } from '@/data/profile'
 /**
  * Contact submission.
  *
- * Out of the box there is no backend: submitLead() opens the visitor's mail
- * client with a message addressed to profile.email (src/data/profile.ts).
+ * The form sends straight to profile.email through FormSubmit (formsubmit.co),
+ * a free forwarding service that needs no account. The first message ever sent
+ * makes FormSubmit email profile.email an activation link; click it once and
+ * every later message arrives in the inbox with the visitor's address as
+ * Reply-To.
  *
- * To wire a real backend (Formspree, a serverless function, a webhook...):
- *   1. Set VITE_CONTACT_ENDPOINT in .env.production to the URL that accepts
- *      a JSON POST of the Lead type below.
- *   2. Have it answer 2xx on success, or a non-2xx with { "error": "..." }
- *      and that sentence is shown to the visitor as-is.
- * With the variable unset the mail client path below is used instead.
+ * If the send fails for any reason (offline, not yet activated), the visitor's
+ * mail client opens with the message already addressed, so nothing is lost.
+ *
+ * To use a different backend, set VITE_CONTACT_ENDPOINT in .env.production to
+ * a URL that accepts a JSON POST of the Lead type below and answers 2xx.
  */
 
 export const ENDPOINT: string = import.meta.env.VITE_CONTACT_ENDPOINT ?? ''
 export const RECIPIENT = profile.email
+const FORMSUBMIT = `https://formsubmit.co/ajax/${RECIPIENT}`
 
 export const MAX_NAME = 80
 export const MAX_EMAIL = 254
@@ -60,7 +63,20 @@ export function readLead(data: FormData): Lead | null {
 
 export class SubmitError extends Error {}
 
+function openMailClient(lead: Lead): SubmitResult {
+  const subject = `Project inquiry from ${lead.firstName} ${lead.lastName}`
+  const body = [`Name: ${lead.firstName} ${lead.lastName}`, `Email: ${lead.email}`, '', lead.message].join('\n')
+  // encodeURIComponent on every value blocks header injection (CR/LF) and
+  // parameter smuggling via & or ?.
+  window.location.href = `mailto:${encodeURIComponent(RECIPIENT)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  return { via: 'mailto' }
+}
+
 export async function submitLead(lead: Lead): Promise<SubmitResult> {
+  // A person leaves the honeypot empty. A bot that fills it gets a quiet
+  // success and nothing is sent.
+  if (lead.website) return { via: 'webhook' }
+
   if (ENDPOINT) {
     const res = await fetch(ENDPOINT, {
       method: 'POST',
@@ -74,10 +90,24 @@ export async function submitLead(lead: Lead): Promise<SubmitResult> {
     return { via: 'webhook' }
   }
 
-  const subject = `Project inquiry from ${lead.firstName} ${lead.lastName}`
-  const body = [`Name: ${lead.firstName} ${lead.lastName}`, `Email: ${lead.email}`, '', lead.message].join('\n')
-  // encodeURIComponent on every value blocks header injection (CR/LF) and
-  // parameter smuggling via & or ?.
-  window.location.href = `mailto:${encodeURIComponent(RECIPIENT)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-  return { via: 'mailto' }
+  try {
+    const res = await fetch(FORMSUBMIT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        name: `${lead.firstName} ${lead.lastName}`,
+        email: lead.email,
+        message: lead.message,
+        _subject: `Portfolio inquiry from ${lead.firstName} ${lead.lastName}`,
+        _template: 'table',
+        _captcha: 'false',
+      }),
+    })
+    const body = await res.json().catch(() => null)
+    const refused = body && (body.success === false || body.success === 'false')
+    if (res.ok && !refused) return { via: 'webhook' }
+  } catch {
+    // Offline or blocked: fall through to the mail client below.
+  }
+  return openMailClient(lead)
 }

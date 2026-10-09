@@ -137,8 +137,8 @@ export const caseStudies: CaseStudy[] = [
 /* ---------- Portfolio ---------- */
 
 export const WIX_PORTFOLIO = 'https://fretzfernff.wixsite.com/portfolio2023/portfolio'
-export const CV_URL =
-  'https://375b8e02-4420-493c-87c5-6325ab125e8c.filesusr.com/ugd/e6fe4c_637b43b135e8492fb67c153695161f5e.pdf'
+/** The resume PDF hosted with the site (public/Fretz-Fernandez-CV.pdf). */
+export const CV_URL = '/Fretz-Fernandez-CV.pdf'
 
 export type FeaturedSite = { name: string; note: string; src: string }
 
@@ -235,5 +235,178 @@ export const roles: Role[] = [
     years: '2016 - 2019',
     logo: '/logos/jnb.png',
     body: 'Combined SEO and visual design to drive organic traffic and brand presence for client websites: keyword research, on-page optimization, link-building campaigns, social media graphics and promotional materials, with reporting from Google Analytics and Search Console.',
+  },
+]
+
+/* ---------- Reports and analytics ---------- */
+
+export type Report = {
+  file: string
+  title: string
+  /** The tool and site the screenshot comes from. */
+  context: string
+  shows: string
+  did: string
+  result: string
+}
+
+export type ReportGroup = { title: string; lede: string; items: Report[] }
+
+export const reportGroups: ReportGroup[] = [
+  {
+    title: 'Rankings and visibility',
+    lede: 'Rank tracking in SE Ranking: where the keywords started and where they sit now.',
+    items: [
+      {
+        file: 'rank-tracker-halifax-taxi',
+        title: 'Airport taxi searches take the top spots',
+        context: 'SE Ranking and Search Console · Halifax airport taxi site',
+        shows: 'Keyword positions for a Halifax airport taxi website, with last month of Search Console data underneath.',
+        did: 'I pointed airport-intent searches at dedicated pages and tracked every movement.',
+        result:
+          'Top 3 keywords reached 40 (+34), Top 10 reached 64 (+55), and search visibility hit 53.7% (+52.3). "Halifax taxi from airport" (390 searches) sits at #1. Last month brought 213 clicks from 20.2K impressions at an average position of 4.7.',
+      },
+      {
+        file: 'rank-tracker-visibility',
+        title: 'From position 100 to the low 30s, and holding',
+        context: 'SE Ranking · Google Canada, Toronto',
+        shows: 'Average position over time for 116 tracked keywords, from a March 2025 baseline to October 2026.',
+        did: 'Keyword research, on-page fixes and link-building, then steady tracking to see which gains last.',
+        result:
+          'Average position moved from around 100 at baseline to 32 and has held since late 2025. Search visibility is 45 (+27), 43% of keywords are in the Top 10 (+9), and the traffic forecast is 19,977 (+5,806).',
+      },
+      {
+        file: 'rank-tracker-pharmacy',
+        title: 'Local pharmacy terms at #1 to #3',
+        context: 'SE Ranking · Toronto pharmacy',
+        shows: 'A Toronto pharmacy\'s tracked keywords with their positions three months ago, last month and today.',
+        did: 'I optimized service pages and product questions for local and long-tail searches and watched content scores.',
+        result:
+          '"Compliance Packaging Toronto" and "Medication Synchronization Toronto" are at #1. "cloud pharmacy toronto", "small pharmacy near me" and "compounded pharmacy near me" are at #2. "Prescription medication Toronto" climbed from 22 to 2 in three months.',
+      },
+      {
+        file: 'rank-tracker-bus-charter',
+        title: 'Bus charter keywords reach page one',
+        context: 'SE Ranking · GTA coach and bus rental',
+        shows: '131 tracked keywords for a coach and bus rental service around Toronto and the GTA.',
+        did: 'I targeted high-intent rental and hiring searches with matching service and pricing pages.',
+        result:
+          '"Bus for rent near me" went from 37 to 5 in three months, "toronto bus charter companies" from 59 to 5, and "hiring a coach and driver GTA" from 24 to 5. Cost-related terms slipped back, so pricing content is the next focus.',
+      },
+    ],
+  },
+  {
+    title: 'Technical health and speed',
+    lede: 'Audits and speed tests: the groundwork that lets the content rank.',
+    items: [
+      {
+        file: 'pagespeed-halifax-blog',
+        title: 'Perfect speed score on mobile and desktop',
+        context: 'PageSpeed Insights · Halifax airport taxi blog',
+        shows: 'PageSpeed Insights results for one blog article, mobile on the left and desktop on the right.',
+        did: 'I tuned images, scripts and layout for Core Web Vitals so pages load fast on phones.',
+        result: 'Performance 100, Best Practices 100 and SEO 100 on both devices, with Accessibility at 92.',
+      },
+      {
+        file: 'competitors-and-audit-halifax',
+        title: 'Competitor benchmark and a 95/100 site health',
+        context: 'SE Ranking · Halifax airport taxi',
+        shows: 'Competitive research for Canada next to the site audit of the same website.',
+        did: 'I benchmark against local competitors and work through audit errors and warnings.',
+        result:
+          'Organic traffic is 236 (+47) across 510 organic keywords (+21). Site health is 95/100 over 198 pages, with 185 healthy and 2 errors. SE Ranking\'s marketing plan lists 65 tasks that are my queue for the next round.',
+      },
+      {
+        file: 'page-level-crawl-halifax',
+        title: 'Page-level crawl: what earns keywords',
+        context: 'SE Ranking audit · Halifax airport taxi',
+        shows: 'Every page with its traffic, indexability, depth and keyword count.',
+        did: 'I check each page\'s indexability, canonical status and internal links, and find the pages that earn keywords.',
+        result:
+          'The homepage ranks for 490 keywords, and comparison posts such as "Uber vs taxi" rank for 48 and 63. Nearly every page is indexable with a 200 status. One services page is flagged non-canonical, the kind of detail I triage.',
+      },
+      {
+        file: 'site-audit-and-backlinks',
+        title: 'Health score 98 and a clean link profile',
+        context: 'SE Ranking · site audit and backlinks',
+        shows: 'The audit health score and issue breakdown above, the backlink profile below.',
+        did: 'I fix audit errors and warnings, build quality links, and keep a disavow list for the bad ones.',
+        result:
+          'Health score 98 (Excellent), up 5. Healthy pages rose by 59 to 183 of 186, leaving 3 errors. The profile holds 505 backlinks from 149 domains.',
+      },
+    ],
+  },
+  {
+    title: 'Traffic and Search Console',
+    lede: 'What visitors do once they arrive, and how the pages appear in Google.',
+    items: [
+      {
+        file: 'gsc-august-impressions',
+        title: '300K impressions at average position 8.9',
+        context: 'Google Search Console · August 2026',
+        shows: 'A month of Search Console data: clicks, impressions, click-through rate and average position.',
+        did: 'I match titles, metadata and content to intent-driven queries and watch query-level changes.',
+        result:
+          '1.3K clicks from 302.1K impressions at an average position of 8.9. The 0.4% click-through rate shows where title and snippet testing pays off next.',
+      },
+      {
+        file: 'gsc-and-ai-features',
+        title: 'Showing up in AI-generated answers',
+        context: 'Google Search Console · Web and Generative AI features',
+        shows: 'Web performance for August 2026, with the new Generative AI features report below it.',
+        did: 'I add Schema and answer-style content for GEO and AEO, then watch this report to see it work.',
+        result:
+          'Web: 54 clicks from 15.6K impressions at average position 39.3. AI features: 3.89K impressions over three months, rising from around 50 a day to a peak above 130 in late September.',
+      },
+      {
+        file: 'ga4-engagement-overview',
+        title: '92% engagement and 202 conversions',
+        context: 'Google Analytics 4 · August 2026',
+        shows: 'The audience report for a month: sessions, users, views, engagement and conversions.',
+        did: 'I set up GA4 and Tag Manager events so conversions are counted properly.',
+        result: '1.8K sessions, 1.6K users and 4.7K views, with a 92.32% engagement rate and 202 conversions.',
+      },
+      {
+        file: 'ga4-baseline',
+        title: 'A baseline to build on',
+        context: 'Google Analytics 4 · Audience report',
+        shows: '538 sessions and 509 users, with 15 conversions, a 36.43% engagement rate and 13 seconds of average engagement.',
+        did: 'Conversion events are in place, so the funnel can be measured from day one.',
+        result:
+          'These numbers are the starting line. Content depth and page experience are the next work to raise engagement time and rate.',
+      },
+    ],
+  },
+  {
+    title: 'Local SEO and links',
+    lede: 'Google Business Profile reach and the directory links that support it.',
+    items: [
+      {
+        file: 'gbp-pharmacy-reach',
+        title: '58,982 profile views from local search',
+        context: 'Google Business Profile · May to October 2026',
+        shows: 'How people find a pharmacy\'s profile, on which platform, and what they search.',
+        did: 'I optimize the profile and track which searches bring people in.',
+        result:
+          '58,982 profile views (50% from Google Maps on mobile, 35% from Search on mobile), 3,299 interactions and 31,748 searches that showed the profile. The top terms are "pharmacy" (17K) and "pharmacy near me" (3,616). October is a partial month, which explains the final dip.',
+      },
+      {
+        file: 'gbp-monthly-interactions',
+        title: 'Year-on-year profile interactions',
+        context: 'Google Business Profile · May and July 2026',
+        shows: 'Business Profile interactions for two months, each compared with the same month of 2025.',
+        did: 'I keep the profile complete and track calls, website clicks and bookings.',
+        result: '356 interactions in May 2026 and 159 in July 2026, both up on the same month of 2025.',
+      },
+      {
+        file: 'backlinks-citations',
+        title: 'Clean links from directories and clinics',
+        context: 'SE Ranking backlink checker · pharmacy site',
+        shows: 'New backlinks pointing at a pharmacy\'s website, with their authority and toxicity scores.',
+        did: 'I build local citations and directory links, then check each one for toxicity.',
+        result:
+          'Links from Medimap (Domain Trust 74), a clinic directory (49) and others, all with a toxicity score of 0. Two are marked as best links.',
+      },
+    ],
   },
 ]
