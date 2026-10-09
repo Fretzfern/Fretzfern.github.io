@@ -427,3 +427,23 @@
   .bento__badge-tag, .bento__review-work { font-size: 12px; }
   .bento__review-role { font-size: 12.5px; }
 }
+
+/* About: SEO result tiles. */
+.bento__metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: center;
+  gap: 8px;
+}
+.bento__metric {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: inset 0 0 0 1px var(--line);
+  min-width: 0;
+}
+.bento__metric-value { font-size: clamp(17px, 1.5vw, 22px); font-weight: 700; line-height: 1.1; color: var(--navy); }
+.bento__metric-label { font-size: 11px; line-height: 1.3; color: var(--muted); }

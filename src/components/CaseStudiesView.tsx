@@ -1,7 +1,7 @@
 import { caseStudies } from '@/data/work'
 import '@/styles/work.css'
 
-/** /case-studies: three SEO case studies, each with its own result images. */
+/** /case-studies: five SEO case studies, each with its own result images. */
 export default function CaseStudiesView() {
   return (
     <section className="wk" aria-labelledby="cs-title">
@@ -11,7 +11,7 @@ export default function CaseStudiesView() {
           SEO work, and what it moved.
         </h1>
         <p className="pgrid__lede">
-          Three client campaigns: the problem, what I did, and the numbers that came back.
+          Five client campaigns: the problem, what I did, and the numbers that came back. Select any screenshot to open it full size.
         </p>
       </header>
 
@@ -51,20 +51,33 @@ export default function CaseStudiesView() {
               </div>
             </div>
 
-            <h3 className="wk__h3">Results</h3>
-            <ul className="wk__stats">
-              {c.results.map((r) => (
-                <li className="wk__stat" key={r.label}>
-                  <span className="wk__stat-value">{r.value}</span>
-                  <span className="wk__stat-label">{r.label}</span>
-                </li>
-              ))}
-            </ul>
+            {c.results.length > 0 && (
+              <>
+                <h3 className="wk__h3">Results</h3>
+                <ul className="wk__stats">
+                  {c.results.map((r) => (
+                    <li className="wk__stat" key={r.label}>
+                      <span className="wk__stat-value">{r.value}</span>
+                      <span className="wk__stat-label">{r.label}</span>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+
+            {c.next && (
+              <>
+                <h3 className="wk__h3">Next focus</h3>
+                <p className="wk__p">{c.next}</p>
+              </>
+            )}
 
             <div className={c.shots.length > 1 ? 'wk__shots wk__shots--multi' : 'wk__shots'}>
               {c.shots.map((s) => (
                 <figure className="wk__shot" key={s.src}>
-                  <img src={s.src} alt={s.alt} loading="lazy" decoding="async" />
+                  <a href={s.src} target="_blank" rel="noopener noreferrer">
+                    <img src={s.src} alt={s.alt} loading="lazy" decoding="async" />
+                  </a>
                 </figure>
               ))}
             </div>

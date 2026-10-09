@@ -16,6 +16,8 @@ export type CaseStudy = {
   challenges: string[]
   solution: { title: string; body: string }[]
   results: Stat[]
+  /** An honest note on what the next round of work targets. */
+  next?: string
   shots: Shot[]
 }
 
@@ -86,15 +88,8 @@ export const caseStudies: CaseStudy[] = [
         body: 'Streamlined navigation and clear call-to-action paths to improve dwell time and reduce bounce rates.',
       },
     ],
-    results: [
-      { value: '58,731', label: 'Total impressions' },
-      { value: '24,892', label: 'Clicks' },
-      { value: '45 (+9.7%)', label: 'Search visibility score' },
-      { value: '2m 48s', label: 'Average engagement time' },
-      { value: '68.9%', label: 'Organic search traffic share' },
-      { value: '99/100', label: 'Website health score' },
-    ],
-    shots: [{ src: '/work/cs-ajt-dashboard.jpg', alt: 'Analytics dashboard for the AJT Roofing campaign' }],
+    results: [{ value: '99/100', label: 'Website health score' }],
+    shots: [{ src: '/work/site-ajt-roofing.jpg', alt: 'The AJT Roofing & Contracting website' }],
   },
   {
     id: 'cloud-pharmacy',
@@ -123,14 +118,122 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
     results: [
-      { value: '35', label: 'Total keywords secured' },
       { value: '19', label: 'Keywords in the Top 3' },
-      { value: '72', label: 'Keywords in the Top 10' },
-      { value: '79 (+14.2%)', label: 'Search visibility score' },
-      { value: '1.8K+', label: 'Organic sessions' },
-      { value: '+27.73%', label: 'Organic traffic performance' },
+      { value: '45', label: 'Keywords in the Top 10' },
+      { value: '27.73%', label: 'Search visibility' },
+      { value: '3.1K', label: 'Organic keywords' },
+      { value: '1.8K', label: 'Sessions in the monthly report' },
+      { value: '202', label: 'Conversions tracked' },
+      { value: '68.9%', label: 'Share of traffic from organic search (+14.2%)' },
+      { value: '2m 48s', label: 'Average session duration (+9.7%)' },
+      { value: '42.6%', label: 'Bounce rate (down 6.3%)' },
     ],
-    shots: [{ src: '/work/cs-pharmacy-dashboard.jpg', alt: 'Cloud Pharmacy SEO and analytics performance overview' }],
+    shots: [
+      { src: '/work/cs-pharmacy-dashboard.jpg', alt: 'Cloud Pharmacy SEO and analytics performance overview' },
+      { src: '/work/cs-pharmacy-analytics.jpg', alt: 'Cloud Pharmacy traffic and engagement dashboard' },
+    ],
+  },
+  {
+    id: 'travel-time-taxi',
+    client: 'Travel Time Taxi & Limousine',
+    industry: 'Airport taxi and limousine service, Halifax',
+    scope: 'Monthly SEO program: local SEO, content, links and reporting',
+    background:
+      'Travel Time Taxi & Limousine serves Halifax Stanfield International Airport and long-distance routes across Nova Scotia through taxihalifaxairport.com. The program aims for steadier airport and long-distance bookings from search, backed by monthly reporting on the Google Business Profile, rankings, traffic and site health.',
+    challenges: [
+      'Business Profile views and interactions were running 12% to 15% below the same months of 2025.',
+      'Many airport terms ranked on page one but earned few clicks, with click-through rate holding at 0.9%.',
+      'The backlink profile included low-quality bookmark and syndicated links that needed ongoing monitoring.',
+    ],
+    solution: [
+      {
+        title: 'Local SEO and Google Business Profile',
+        body: 'Posted eight Business Profile updates in September on flat-rate, long-distance and flight-day topics, and kept the 4.9-star, 45-review profile active.',
+      },
+      {
+        title: 'Content and on-page',
+        body: 'Added airport-focused blog posts such as a Dalhousie-to-airport guide and a delayed-flight guide, with rewritten SEO titles, slugs and meta descriptions.',
+      },
+      {
+        title: 'Links and monitoring',
+        body: 'Tracked 65 referring domains and 191 backlinks, kept a 34-entry disavow list, and watched for lost or broken links.',
+      },
+      {
+        title: 'Analytics and technical',
+        body: 'Reported monthly from GA4, Search Console and SE Ranking, and held the site audit at a health score of 95/100 across 198 pages.',
+      },
+    ],
+    results: [
+      { value: '45 to 295', label: 'Conversions, August to September (GA4)' },
+      { value: '34 to 227', label: 'Organic conversions, August to September' },
+      { value: '544 to 670', label: 'Sessions, August to September' },
+      { value: '50.6%', label: 'Engagement rate, up from 47.06%' },
+      { value: '3,670', label: 'Business Profile views in September (+30.55%)' },
+      { value: '#1 (+24)', label: '"Scheduled airport pickup Halifax" ranking' },
+      { value: '510 (+21)', label: 'Organic keywords' },
+      { value: '95/100', label: 'Site health score' },
+    ],
+    next:
+      'Over the last three months clicks and impressions eased (744 to 612 clicks) and average position moved from 11.9 to 14.3. The next round targets click-through with sharper titles and descriptions, pushing "Halifax airport transportation" from #6 into the top 3, and closing the year-on-year Business Profile gap with reviews and Maps-focused posts.',
+    shots: [
+      { src: '/cases/ttt-analytics-overview.jpg', alt: 'Travel Time Taxi Google Analytics overview, August versus September 2026' },
+      { src: '/cases/ttt-organic-sources.jpg', alt: 'Travel Time Taxi organic traffic sources, August versus September 2026' },
+      { src: '/cases/ttt-keyword-rankings.jpg', alt: 'Travel Time Taxi keyword rankings table' },
+      { src: '/cases/ttt-top-keywords.jpg', alt: 'Travel Time Taxi top, jumped and dropped keywords' },
+      { src: '/cases/ttt-gbp-discovery.jpg', alt: 'How people discovered the Travel Time Taxi Business Profile' },
+      { src: '/cases/ttt-gbp-posts.jpg', alt: 'Travel Time Taxi Google Business Profile posts' },
+    ],
+  },
+  {
+    id: 'brown-coach-line',
+    client: 'Brown Coach Line',
+    industry: 'Charter bus and coach rental, Toronto and the GTA',
+    scope: 'Monthly SEO program: rankings, content, links and reporting',
+    background:
+      'Brown Coach Line is a Markham, Ontario coach company offering charter and group transportation across Toronto, the GTA and Ontario. The program targets high-intent rental searches such as bus rental costs and "near me" queries, with monthly reporting for August 13 to September 13, 2026.',
+    challenges: [
+      'Competitive "bus rental" and "charter" searches across Toronto and the GTA.',
+      'A new full-site crawl surfaced 3 errors and 55 warnings to clear.',
+      'Link equity sat on a few pages: 20 anchor-text variations and only 25 domains linking to the homepage.',
+    ],
+    solution: [
+      {
+        title: 'Keyword and content strategy',
+        body: 'Targeted rental, cost and "near me" terms with long-form guides, including a Toronto charter bus cost guide, a corporate event transportation guide and a group airport transfer comparison.',
+      },
+      {
+        title: 'On-page optimization',
+        body: 'Wrote SEO titles, slugs and meta descriptions around quote requests for each new post.',
+      },
+      {
+        title: 'Off-page and links',
+        body: 'Grew a profile of 505 backlinks from 149 referring domains, including Medium, Pinterest, Trustpilot and BBB, with a 12-entry disavow list.',
+      },
+      {
+        title: 'Technical and speed',
+        body: 'Ran full-site crawls and PageSpeed tests, lifting the audit health score from 84 to 93.',
+      },
+    ],
+    results: [
+      { value: '#1', label: '"Bus for rent cheap" (+32), "coach rentals near me", "coach bus rental costs" and "Toronto Bus Rental Cost"' },
+      { value: '+96', label: '"Charter bus rental companies near me" jumped to #4' },
+      { value: '49 to 67', label: 'Search Console clicks (+36.7%)' },
+      { value: '40.5 to 35.7', label: 'Average position in Search Console' },
+      { value: '46.15%', label: 'Organic engagement rate, up from 38.24%' },
+      { value: '24 to 28', label: 'Conversions (+16.7%)' },
+      { value: '84 to 93', label: 'Site health score, from Strong to Excellent' },
+      { value: '505', label: 'Backlinks from 149 referring domains' },
+    ],
+    next:
+      'Organic sessions dipped (353 to 260) and the new crawl found work to do. The next round recovers session volume, rewrites titles and descriptions for top-ranking terms that earn few clicks, clears the 3 errors and 55 warnings, and adds homepage links from relevant Canadian sources.',
+    shots: [
+      { src: '/cases/bcl-ranking-overview.jpg', alt: 'Brown Coach Line keyword ranking overview' },
+      { src: '/cases/bcl-top-keywords.jpg', alt: 'Brown Coach Line top, jumped and dropped keywords' },
+      { src: '/cases/bcl-search-console.jpg', alt: 'Brown Coach Line Search Console data, July to August versus August to September' },
+      { src: '/cases/bcl-crawl-comparison.jpg', alt: 'Brown Coach Line site audit comparison' },
+      { src: '/cases/bcl-referring-domains.jpg', alt: 'Brown Coach Line referring domains' },
+      { src: '/cases/bcl-blog-posts.jpg', alt: 'New Brown Coach Line blog posts' },
+    ],
   },
 ]
 
@@ -260,8 +363,8 @@ export const reportGroups: ReportGroup[] = [
       {
         file: 'rank-tracker-halifax-taxi',
         title: 'Airport taxi searches take the top spots',
-        context: 'SE Ranking and Search Console · Halifax airport taxi site',
-        shows: 'Keyword positions for a Halifax airport taxi website, with last month of Search Console data underneath.',
+        context: 'SE Ranking and Search Console · Travel Time Taxi',
+        shows: 'Keyword positions for the Travel Time Taxi website, with last month of Search Console data underneath.',
         did: 'I pointed airport-intent searches at dedicated pages and tracked every movement.',
         result:
           'Top 3 keywords reached 40 (+34), Top 10 reached 64 (+55), and search visibility hit 53.7% (+52.3). "Halifax taxi from airport" (390 searches) sits at #1. Last month brought 213 clicks from 20.2K impressions at an average position of 4.7.',
@@ -278,8 +381,8 @@ export const reportGroups: ReportGroup[] = [
       {
         file: 'rank-tracker-pharmacy',
         title: 'Local pharmacy terms at #1 to #3',
-        context: 'SE Ranking · Toronto pharmacy',
-        shows: 'A Toronto pharmacy\'s tracked keywords with their positions three months ago, last month and today.',
+        context: 'SE Ranking · Cloud Pharmacy',
+        shows: 'Cloud Pharmacy\'s tracked keywords with their positions three months ago, last month and today.',
         did: 'I optimized service pages and product questions for local and long-tail searches and watched content scores.',
         result:
           '"Compliance Packaging Toronto" and "Medication Synchronization Toronto" are at #1. "cloud pharmacy toronto", "small pharmacy near me" and "compounded pharmacy near me" are at #2. "Prescription medication Toronto" climbed from 22 to 2 in three months.',
@@ -287,8 +390,8 @@ export const reportGroups: ReportGroup[] = [
       {
         file: 'rank-tracker-bus-charter',
         title: 'Bus charter keywords reach page one',
-        context: 'SE Ranking · GTA coach and bus rental',
-        shows: '131 tracked keywords for a coach and bus rental service around Toronto and the GTA.',
+        context: 'SE Ranking · Brown Coach Line',
+        shows: '131 tracked keywords for Brown Coach Line, a coach and bus rental service around Toronto and the GTA.',
         did: 'I targeted high-intent rental and hiring searches with matching service and pricing pages.',
         result:
           '"Bus for rent near me" went from 37 to 5 in three months, "toronto bus charter companies" from 59 to 5, and "hiring a coach and driver GTA" from 24 to 5. Cost-related terms slipped back, so pricing content is the next focus.',
@@ -302,7 +405,7 @@ export const reportGroups: ReportGroup[] = [
       {
         file: 'pagespeed-halifax-blog',
         title: 'Perfect speed score on mobile and desktop',
-        context: 'PageSpeed Insights · Halifax airport taxi blog',
+        context: 'PageSpeed Insights · Travel Time Taxi blog',
         shows: 'PageSpeed Insights results for one blog article, mobile on the left and desktop on the right.',
         did: 'I tuned images, scripts and layout for Core Web Vitals so pages load fast on phones.',
         result: 'Performance 100, Best Practices 100 and SEO 100 on both devices, with Accessibility at 92.',
@@ -310,7 +413,7 @@ export const reportGroups: ReportGroup[] = [
       {
         file: 'competitors-and-audit-halifax',
         title: 'Competitor benchmark and a 95/100 site health',
-        context: 'SE Ranking · Halifax airport taxi',
+        context: 'SE Ranking · Travel Time Taxi',
         shows: 'Competitive research for Canada next to the site audit of the same website.',
         did: 'I benchmark against local competitors and work through audit errors and warnings.',
         result:
@@ -319,7 +422,7 @@ export const reportGroups: ReportGroup[] = [
       {
         file: 'page-level-crawl-halifax',
         title: 'Page-level crawl: what earns keywords',
-        context: 'SE Ranking audit · Halifax airport taxi',
+        context: 'SE Ranking audit · Travel Time Taxi',
         shows: 'Every page with its traffic, indexability, depth and keyword count.',
         did: 'I check each page\'s indexability, canonical status and internal links, and find the pages that earn keywords.',
         result:
@@ -328,7 +431,7 @@ export const reportGroups: ReportGroup[] = [
       {
         file: 'site-audit-and-backlinks',
         title: 'Health score 98 and a clean link profile',
-        context: 'SE Ranking · site audit and backlinks',
+        context: 'SE Ranking · Brown Coach Line audit and backlinks',
         shows: 'The audit health score and issue breakdown above, the backlink profile below.',
         did: 'I fix audit errors and warnings, build quality links, and keep a disavow list for the bad ones.',
         result:
@@ -384,7 +487,7 @@ export const reportGroups: ReportGroup[] = [
       {
         file: 'gbp-pharmacy-reach',
         title: '58,982 profile views from local search',
-        context: 'Google Business Profile · May to October 2026',
+        context: 'Google Business Profile · Cloud Pharmacy, May to October 2026',
         shows: 'How people find a pharmacy\'s profile, on which platform, and what they search.',
         did: 'I optimize the profile and track which searches bring people in.',
         result:
@@ -401,7 +504,7 @@ export const reportGroups: ReportGroup[] = [
       {
         file: 'backlinks-citations',
         title: 'Clean links from directories and clinics',
-        context: 'SE Ranking backlink checker · pharmacy site',
+        context: 'SE Ranking backlink checker · Cloud Pharmacy',
         shows: 'New backlinks pointing at a pharmacy\'s website, with their authority and toxicity scores.',
         did: 'I build local citations and directory links, then check each one for toxicity.',
         result:

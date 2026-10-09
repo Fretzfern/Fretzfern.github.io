@@ -102,3 +102,5 @@
 .wk__report .wk__p { font-size: 14px; line-height: 1.6; }
 .wk__report .wk__p strong { color: var(--navy); }
 .wk__p--result { border-top: 1px solid var(--line); padding-top: 8px; margin-top: 2px; }
+
+.wk__shot a { display: block; }

@@ -23,7 +23,6 @@ import {
   Code,
 } from '@/components/slab'
 import type { Icon as PhosphorIcon } from '@/components/slab'
-import { profile } from '@/data/profile'
 
 /**
  * Home's showcase: one card per rail view, each an index of what that view
@@ -58,7 +57,13 @@ const CLIENTS = [
 ]
 
 // Three photos of you, fanned. Small copies are fine - the fan shows them under 100px.
-const PHOTOS = [profile.avatarSrc, `${profile.avatarSrc}?2`, `${profile.avatarSrc}?3`]
+/** Four headline numbers from the report screenshots on the Portfolio page. */
+const SEO_METRICS = [
+  { value: '98/100', label: 'Site health score' },
+  { value: '+34', label: 'Top 3 keywords gained' },
+  { value: '302K', label: 'Search impressions in a month' },
+  { value: '58,982', label: 'Business Profile views' },
+]
 
 type Skill = { id: string; name: string; Icon: PhosphorIcon; status?: string }
 
@@ -109,7 +114,7 @@ export default function HomeBento() {
     <nav className="bento" aria-label="Explore the portfolio">
       {/* Case studies: site and dashboard shots drift upward on a looped track. */}
       <Link to="/case-studies" className="bento__card bento__card--projects">
-        <CardHead Icon={FolderOpen} title="Case studies" desc="Three SEO campaigns and their results." />
+        <CardHead Icon={FolderOpen} title="Case studies" desc="Five SEO campaigns and their results." />
         <div className="bento__media bento__reel" aria-hidden="true">
           <div className="bento__reel-track">
             {[...PROJECT_SHOTS, ...PROJECT_SHOTS].map((src, i) => (
@@ -121,13 +126,14 @@ export default function HomeBento() {
         </div>
       </Link>
 
-      {/* About: a fanned stack of photos. */}
+      {/* About: four SEO results as small stat tiles. */}
       <Link to="/about" className="bento__card bento__card--about">
         <CardHead Icon={User} title="About" desc="Seven years of SEO and web design." />
-        <div className="bento__media bento__fan" aria-hidden="true">
-          {PHOTOS.map((src, i) => (
-            <span key={src} className="bento__photo" style={{ ['--i' as string]: i }}>
-              <img src={src} alt="" loading="lazy" decoding="async" />
+        <div className="bento__media bento__metrics" aria-hidden="true">
+          {SEO_METRICS.map((m) => (
+            <span key={m.label} className="bento__metric">
+              <strong className="bento__metric-value">{m.value}</strong>
+              <span className="bento__metric-label">{m.label}</span>
             </span>
           ))}
         </div>

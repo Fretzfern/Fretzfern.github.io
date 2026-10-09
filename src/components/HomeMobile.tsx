@@ -47,7 +47,7 @@ export function HomeStats() {
 }
 
 const TILES = [
-  { n: '01', label: 'Case studies', to: '/case-studies', title: 'Three SEO case studies', desc: 'The problem, the work, the numbers.', img: '/work/site-kratom-delivery.jpg' },
+  { n: '01', label: 'Case studies', to: '/case-studies', title: 'Five SEO case studies', desc: 'The problem, the work, the numbers.', img: '/work/site-kratom-delivery.jpg' },
   { n: '02', label: 'Services', to: '/services', title: 'SEO and WordPress, end to end', desc: 'Audits, local SEO, schema, site builds.', Icon: Stack },
   { n: '03', label: 'Portfolio', to: '/portfolio', title: 'Websites and results', desc: 'Featured sites and result screenshots.', Icon: Coffee, accent: true },
   { n: '04', label: 'Experience', to: '/experience', title: 'Experience', desc: 'Where I have worked since 2016.', img: '/logos/canadian-web-designs.png' },
