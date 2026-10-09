@@ -65,8 +65,8 @@ export const caseStudies: CaseStudy[] = [
   {
     id: 'ajt-roofing-contracting',
     client: 'AJT Roofing & Contracting',
-    industry: 'Local service / contracting',
-    scope: 'SEO campaign: search recovery and ranking dominance',
+    industry: 'Local service / contracting, St. Catharines and the Niagara region',
+    scope: 'SEO campaign: search recovery and ranking dominance (monthly report, November 2025)',
     background:
       'The client experienced a drop in website traffic and overall online visibility. They required an aggressive search engine optimization strategy to recover lost positions, improve search visibility, and convert traffic into inbound service leads.',
     challenges: [
@@ -77,7 +77,7 @@ export const caseStudies: CaseStudy[] = [
     solution: [
       {
         title: 'Core Web Vitals and technical overhaul',
-        body: 'Corrected indexing issues, optimized structured data, and fixed broken or suspicious links to reach 99/100 Website Health.',
+        body: 'Corrected indexing issues, optimized structured data, and fixed broken or suspicious links, clearing all 14 audit errors and lifting the health score from 84 to 87.',
       },
       {
         title: 'Local and intent-focused content',
@@ -88,8 +88,27 @@ export const caseStudies: CaseStudy[] = [
         body: 'Streamlined navigation and clear call-to-action paths to improve dwell time and reduce bounce rates.',
       },
     ],
-    results: [{ value: '99/100', label: 'Website health score' }],
-    shots: [{ src: '/work/site-ajt-roofing.jpg', alt: 'The AJT Roofing & Contracting website' }],
+    results: [
+      { value: '14 to 0', label: 'Critical site errors in the audit' },
+      { value: '84 to 87', label: 'Site health score' },
+      { value: '169 to 81', label: 'Audit warnings (112 fixed)' },
+      { value: '585 (+162)', label: 'Organic clicks per month (SE Ranking)' },
+      { value: '896 (+37)', label: 'Organic keywords' },
+      { value: '507', label: 'Referring domains, up from 445 (Domain Trust 18)' },
+      { value: '1,123 (+95.6%)', label: 'Business Profile views in October vs October 2024' },
+      { value: '105 (+12.9%)', label: 'Profile interactions in November vs November 2024' },
+      { value: '643 to 667', label: 'Sessions, October to November (GA4)' },
+    ],
+    next:
+      'Search Console clicks eased from 176 to 126 over the month and average position slipped from 16 to 18.5, as "roofing st catharines" and related terms dropped one or two places and Business Profile search appearances fell from 160 to 16. The next round recovers the core local service pages, rewrites titles and descriptions to lift the 0.4% click-through rate, adds internal links to lift Page Trust (13), and refreshes Business Profile posts, photos and citations.',
+    shots: [
+      { src: '/cases/ajt-crawl-comparison.jpg', alt: 'AJT Roofing site audit comparison: errors cleared from 14 to 0' },
+      { src: '/cases/ajt-top-keywords.jpg', alt: 'AJT Roofing top, jumped and dropped keywords' },
+      { src: '/cases/ajt-gbp-performance.jpg', alt: 'AJT Roofing Business Profile interactions, October and November 2025' },
+      { src: '/cases/ajt-gbp-discovery.jpg', alt: 'How people discovered the AJT Roofing Business Profile' },
+      { src: '/cases/ajt-search-console.jpg', alt: 'AJT Roofing Search Console data, October versus November 2025' },
+      { src: '/cases/ajt-search-console-queries.jpg', alt: 'AJT Roofing top queries, top pages and Search Console milestones' },
+    ],
   },
   {
     id: 'cloud-pharmacy',
