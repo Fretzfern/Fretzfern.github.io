@@ -312,8 +312,8 @@ export const testimonials: Testimonial[] = [
     headline: '5 out of 5 stars',
     rating: 5,
     quote: [
-      'Fretz was an indispensable part of the JNB Web Promotion team during his three years with us as a Junior SEO Specialist. Handling a demanding portfolio of multiple client accounts at once, he showed a rare level of discipline, adaptability, and technical precision for someone early in their career.',
-      'From meticulous on-site optimizations to solid off-site strategies, Fretz consistently delivered measurable rank improvements and steady organic growth across diverse industries. He took complete ownership of his accounts, balanced competing priorities with ease, and always stayed ahead of algorithm updates. Any team or client would be lucky to have his dedication and SEO expertise.',
+      'Fretz was an indispensable part of the JNB Web Promotion team during his three years with us as a Junior SEO Specialist. Handling a demanding portfolio of multiple client accounts at once, he showed a rare level of discipline and adaptability.',
+      'From meticulous on-site optimizations to solid off-site strategies, Fretz consistently delivered measurable rank improvements and steady organic growth across diverse industries. He took complete ownership of his accounts and balanced competing priorities with ease. Any team or client would be lucky to have his dedication and SEO expertise.',
     ],
     name: 'John Bertrand',
     role: 'Owner',
@@ -325,7 +325,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     quote: [
       'Fretz is an absolute powerhouse. He manages our client accounts across the US, Canada, and Australia with ease, across completely different niches. From technical, on-site, and off-site SEO to GBP management, social posting, and DNS audits, he handles the full spectrum.',
-      'What sets him apart is his initiative. When our web developers were tied up, Fretz researched and resolved complex SEO plugin errors on his own, while coordinating seamlessly with the graphics and development teams on WordPress, GSC, GA4, and GTM setups. He is reliable, proactive, and essential to Volfyre Digital.',
+      'What sets him apart is his initiative. When our web developers were tied up, Fretz researched and resolved complex SEO plugin errors on his own. He is reliable, proactive, and essential to Volfyre Digital.',
     ],
     name: 'Archy',
     role: 'Founder and Owner',
