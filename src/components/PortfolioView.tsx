@@ -1,5 +1,5 @@
-import { ArrowUpRight } from '@/components/slab'
-import { CV_URL, WIX_PORTFOLIO, featuredSites, reportGroups, resultShots, sampleProjects } from '@/data/work'
+import ZoomImage from '@/components/ZoomImage'
+import { CV_URL, featuredSites, reportGroups, resultShots, sampleImage, sampleProjects } from '@/data/work'
 import '@/styles/work.css'
 
 /** /portfolio: websites worked on, the full sample list, and result screenshots. */
@@ -12,14 +12,10 @@ export default function PortfolioView() {
           Sites I have built and optimized.
         </h1>
         <p className="pgrid__lede">
-          A few featured websites, more samples from my full portfolio, and the result screenshots behind them.
+          A few featured websites, more project samples, and the result screenshots behind them. Select any image to enlarge it.
         </p>
         <div className="wk__actions">
-          <a className="wk__btn wk__btn--solid" href={WIX_PORTFOLIO} target="_blank" rel="noopener noreferrer">
-            Full portfolio
-            <ArrowUpRight size={14} weight="bold" aria-hidden="true" />
-          </a>
-          <a className="wk__btn" href={CV_URL} target="_blank" rel="noopener noreferrer">
+          <a className="wk__btn wk__btn--solid" href={CV_URL} target="_blank" rel="noopener noreferrer">
             Download CV
           </a>
         </div>
@@ -30,7 +26,7 @@ export default function PortfolioView() {
         <ul className="wk__sites">
           {featuredSites.map((s) => (
             <li className="wk__site" key={s.name}>
-              <img src={s.src} alt={`${s.name} website`} loading="lazy" decoding="async" />
+              <ZoomImage src={s.src} alt={`${s.name} website`} title={s.name} detail={s.note} />
               <span className="wk__site-name">{s.name}</span>
               <span className="wk__site-note">{s.note}</span>
             </li>
@@ -40,13 +36,11 @@ export default function PortfolioView() {
 
       <div className="wk__card">
         <h2 className="wk__card-title">More samples</h2>
-        <ul className="wk__chips">
+        <ul className="wk__samples">
           {sampleProjects.map((p) => (
-            <li key={p.href}>
-              <a className="wk__chip" href={p.href} target="_blank" rel="noopener noreferrer">
-                {p.name}
-                <ArrowUpRight size={12} weight="bold" aria-hidden="true" />
-              </a>
+            <li className="wk__sample" key={p.name}>
+              <ZoomImage src={sampleImage(p)} alt={`${p.name} project`} title={p.name} detail={p.about} noReferrer />
+              <span className="wk__sample-name">{p.name}</span>
             </li>
           ))}
         </ul>
@@ -64,13 +58,11 @@ export default function PortfolioView() {
             <ul className="wk__reports">
               {g.items.map((r) => (
                 <li className="wk__report" key={r.file}>
-                  <img
+                  <ZoomImage
                     src={`/reports/${r.file}-v2.png`}
                     alt={`${r.title}: ${r.context}`}
-                    width={670}
-                    height={370}
-                    loading="lazy"
-                    decoding="async"
+                    title={r.title}
+                    detail={r.context}
                   />
                   <div className="wk__report-body">
                     <h4 className="wk__report-title">{r.title}</h4>
@@ -97,13 +89,7 @@ export default function PortfolioView() {
         <ul className="wk__gallery">
           {resultShots.map((src, i) => (
             <li key={src}>
-              <img
-                src={src}
-                alt={`Project result screenshot ${i + 1}`}
-                loading="lazy"
-                decoding="async"
-                referrerPolicy="no-referrer"
-              />
+              <ZoomImage src={src} alt={`Project result screenshot ${i + 1}`} noReferrer />
             </li>
           ))}
         </ul>

@@ -262,11 +262,12 @@ export type Testimonial = {
   headline: string
   /** 1 to 5 */
   rating: number
-  quote: string
+  /** One entry per paragraph. */
+  quote: string[]
   name: string
   business: string
   service: string
-  project: string
+  project?: string
   impact: { label: string; text: string }[]
 }
 
@@ -275,8 +276,9 @@ export const testimonials: Testimonial[] = [
   {
     headline: '5 out of 5 stars for SEO services',
     rating: 5,
-    quote:
+    quote: [
       'We really appreciated all the work you put into helping our website improve its organic growth and search visibility. Your SEO efforts were very helpful, and we could see the value in the work you were doing for the business. You were professional, knowledgeable, helpful, and easy to communicate with throughout the process. We were very happy with the work you completed and would have no problem recommending you to others looking for SEO services.',
+    ],
     name: 'Alfonso',
     business: 'Kratom Delivery Canada',
     service: 'Search engine optimization (SEO) and search visibility',
@@ -287,11 +289,27 @@ export const testimonials: Testimonial[] = [
       { label: 'Verdict', text: 'Would recommend to businesses looking for SEO services.' },
     ],
   },
+  {
+    headline: '5 out of 5 stars',
+    rating: 5,
+    quote: [
+      'Yes, definitely. Our organic reach and local search performance improved significantly since you started doing SEO.',
+      'Professional, responsive, and data-driven. Super easy to communicate with and very reliable. Thanks for all your hard work!',
+      'Overall I am very happy with your work. Since you started, results have improved. You have listened to our suggestions and worked on them to achieve results. I am looking forward to seeing improved results on opportunities. Thank you!',
+    ],
+    name: 'Faisal',
+    business: 'Travel Time Taxi and Limo',
+    service: 'Search engine optimization (SEO) and local search',
+    impact: [
+      { label: 'Growth', text: 'Organic reach and local search performance improved significantly.' },
+      { label: 'Working together', text: 'Professional, responsive, data-driven and very reliable.' },
+      { label: 'Feedback', text: 'Listened to suggestions and worked on them to achieve results.' },
+    ],
+  },
 ]
 
 /* ---------- Portfolio ---------- */
 
-export const WIX_PORTFOLIO = 'https://fretzfernff.wixsite.com/portfolio2023/portfolio'
 /** The resume PDF hosted with the site (public/Fretz-Fernandez-CV.pdf). */
 export const CV_URL = '/Fretz-Fernandez-CV.pdf'
 
@@ -304,25 +322,29 @@ export const featuredSites: FeaturedSite[] = [
   { name: 'Halifax Airport Taxi & Limousine', note: 'Transport service website', src: '/work/site-halifax-taxi.jpg' },
 ]
 
-const WIX_PROJECT_BASE = 'https://fretzfernff.wixsite.com/portfolio2023/portfolio-collections/my-portfolio/'
+export type Sample = { name: string; id: string; w: number; h: number; about: string }
 
-export const sampleProjects: { name: string; href: string }[] = [
-  ['Fraserlife', 'fraser'],
-  ['Ashmira', 'ashmira'],
-  ['NYCO Renovations', 'nyco'],
-  ['Frame 25', 'frame25'],
-  ['WeAnswer', 'weanswer'],
-  ['Cyber Security', 'my-project-96942e'],
-  ['FarmTX', 'talun-eco'],
-  ['Cyberhunter', 'cyber-security'],
-  ['Stash&co', 'untitled-project-0ea30f'],
-  ['We Buy House', 'real-estate'],
-  ['BigBus', 'big-bus'],
-  ['Tremblay', 'tremblay'],
-  ['All Roofing', 'untitled-project-015fa6'],
-  ['Bittrust', 'untitled-project'],
-  ['WooCommerce: FranceAtHome', 'my-project'],
-].map(([name, slug]) => ({ name, href: WIX_PROJECT_BASE + slug }))
+/** Cover images are loaded straight from Wix. */
+export const sampleProjects: Sample[] = [
+  { name: 'Fraserlife', id: 'ea9bebf1d053427ab5d2f1e1dc057554', w: 1206, h: 616, about: 'Monthly content posting, offsite work, content optimization and technical checks, plus scheduled social posts (YouTube optimization, Instagram, Facebook, LinkedIn), transcriptions, captions and infographic designs.' },
+  { name: 'Ashmira', id: 'aa444cfd1ee0459eb9727adb557b5f39', w: 1202, h: 702, about: 'A wax and skincare site: onsite and technical optimization, including structured metadata and loading-speed fixes.' },
+  { name: 'NYCO Renovations', id: '7609d1c7f4254ed3b550c2826c125f9a', w: 1202, h: 672, about: 'Link building, content and social media marketing, guest posting, PDF submissions, business and directory listings, with monthly PR, blog, informational and Web 2.0 posts.' },
+  { name: 'Frame 25', id: '3b5a59bd481943f6b95c178d3e4faf74', w: 1215, h: 668, about: 'Built on CraftCMS, where the dashboard is harder to explore than WordPress. Onsite optimization and technical analysis.' },
+  { name: 'WeAnswer', id: '5609ca3d06114f8ab0330b732b65afc2', w: 1201, h: 617, about: '' },
+  { name: 'Cyber Security', id: '7823dc9d405d4be5988c30f752ef5f26', w: 1198, h: 686, about: 'Link building, guest posting, PDF submissions, business listings and directories.' },
+  { name: 'FarmTX', id: '9bfd824a662341b0a480589ea094d1f7', w: 1199, h: 698, about: 'Moved WooCommerce product images to a second domain under development, and added product variations and descriptions.' },
+  { name: 'Cyberhunter', id: '32a6dacdc87f4964a724c475721ea66c', w: 1199, h: 684, about: 'Link building, content and social media marketing, guest posting, PDF submissions, listings and directories, with monthly content posting.' },
+  { name: 'Stash&co', id: '08d6e20af64644dc85cb0d6bebed9fcf', w: 1200, h: 695, about: 'Business listings, directory and PDF submissions, guest posting, link building, content and social media marketing, with monthly content posting.' },
+  { name: 'We Buy House', id: '1661f12407a244e4b8c5f80fad3752ab', w: 1196, h: 682, about: 'Link building, content and social media marketing, guest posting, PDF submissions, listings and directories, with monthly content posting.' },
+  { name: 'BigBus', id: 'b7bf2ec052494fadb594bebbff8946c2', w: 1201, h: 698, about: 'Link building, guest posting, PDF submissions, business listings and directories.' },
+  { name: 'Tremblay', id: 'c4ae40c9ea434dab958dd49d6b446157', w: 1197, h: 673, about: 'Link building, content and social media marketing, guest posting, PDF submissions, listings and directories, with monthly content posting.' },
+  { name: 'All Roofing', id: 'a779297036b1408ea44f72a84883232b', w: 1205, h: 631, about: 'Link building, guest posting, PDF submissions, business listings and directories, with a traffic status report every weekend.' },
+  { name: 'Bittrust', id: '902493c5ecaf44b1b8080b10a2789f7c', w: 1173, h: 683, about: 'A cryptocurrency and bitcoin project I manage: link building, content and social media marketing, guest posting, listings and directories, with monthly content posting.' },
+  { name: 'WooCommerce: FranceAtHome', id: '5c0761ea44fd471ca897d95de326d3e9', w: 1354, h: 688, about: 'Australia\'s biggest online French supermarket. Product, variation and pricing checks, plus offsite, onsite and image optimization.' },
+]
+
+export const sampleImage = (p: Sample) =>
+  `https://static.wixstatic.com/media/e6fe4c_${p.id}~mv2.png/v1/fill/w_${p.w},h_${p.h},al_c/e6fe4c_${p.id}~mv2.png`
 
 const RESULT_IDS = [
   '67a73d5609c3491b848c8ad86d0a437f',

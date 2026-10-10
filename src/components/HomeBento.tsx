@@ -1,5 +1,6 @@
 import type React from 'react'
 import { Link } from 'react-router-dom'
+import { profile } from '@/data/profile'
 import {
   ArrowUpRight,
   FolderOpen,
@@ -56,14 +57,6 @@ const CLIENTS = [
   { name: 'JNB Web Promotion', role: 'Junior SEO / Graphic Designer · 2016 - 2019', work: 'Keywords · On-page · Design', logo: '/logos/jnb.png' },
 ]
 
-// Three photos of you, fanned. Small copies are fine - the fan shows them under 100px.
-/** Four headline numbers from the report screenshots on the Portfolio page. */
-const SEO_METRICS = [
-  { value: '98/100', label: 'Site health score' },
-  { value: '+34', label: 'Top 3 keywords gained' },
-  { value: '302K', label: 'Search impressions in a month' },
-  { value: '58,982', label: 'Business Profile views' },
-]
 
 type Skill = { id: string; name: string; Icon: PhosphorIcon; status?: string }
 
@@ -126,16 +119,15 @@ export default function HomeBento() {
         </div>
       </Link>
 
-      {/* About: four SEO results as small stat tiles. */}
+      {/* About: a short note about me. */}
       <Link to="/about" className="bento__card bento__card--about">
         <CardHead Icon={User} title="About" desc="Seven years of SEO and web design." />
-        <div className="bento__media bento__metrics" aria-hidden="true">
-          {SEO_METRICS.map((m) => (
-            <span key={m.label} className="bento__metric">
-              <strong className="bento__metric-value">{m.value}</strong>
-              <span className="bento__metric-label">{m.label}</span>
-            </span>
-          ))}
+        <div className="bento__media bento__aboutme">
+          <img className="bento__aboutme-photo" src={profile.avatarSrc} alt="" width={56} height={56} />
+          <p className="bento__aboutme-text">
+            I am Fretz, an SEO specialist and WordPress designer. I help businesses get found on Google with technical
+            SEO, local SEO and fast, custom WordPress sites.
+          </p>
         </div>
       </Link>
 

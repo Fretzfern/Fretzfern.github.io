@@ -1,3 +1,4 @@
+import ZoomImage from '@/components/ZoomImage'
 import { caseStudies, testimonials } from '@/data/work'
 import '@/styles/work.css'
 
@@ -11,7 +12,7 @@ export default function CaseStudiesView() {
           SEO work, and what it moved.
         </h1>
         <p className="pgrid__lede">
-          Five client campaigns: the problem, what I did, and the numbers that came back. Select any screenshot to open it full size.
+          Five client campaigns: the problem, what I did, and the numbers that came back. Select any screenshot to enlarge it.
         </p>
       </header>
 
@@ -33,13 +34,15 @@ export default function CaseStudiesView() {
                 <span className="wk__stars-text">{q.headline}</span>
               </p>
               <blockquote className="wk__quote">
-                <p>{q.quote}</p>
+                {q.quote.map((para) => (
+                  <p key={para}>{para}</p>
+                ))}
               </blockquote>
               <figcaption className="wk__who">
                 <strong>{q.name}</strong>
                 <span>{q.business}</span>
                 <span>{q.service}</span>
-                <span>{q.project}</span>
+                {q.project && <span>{q.project}</span>}
               </figcaption>
               <ul className="wk__impact">
                 {q.impact.map((i) => (
@@ -113,9 +116,7 @@ export default function CaseStudiesView() {
             <div className={c.shots.length > 1 ? 'wk__shots wk__shots--multi' : 'wk__shots'}>
               {c.shots.map((s) => (
                 <figure className="wk__shot" key={s.src}>
-                  <a href={s.src} target="_blank" rel="noopener noreferrer">
-                    <img src={s.src} alt={s.alt} loading="lazy" decoding="async" />
-                  </a>
+                  <ZoomImage src={s.src} alt={s.alt} title={c.client} detail={s.alt} />
                 </figure>
               ))}
             </div>
