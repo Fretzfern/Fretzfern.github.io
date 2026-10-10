@@ -1,4 +1,4 @@
-import { caseStudies } from '@/data/work'
+import { caseStudies, testimonials } from '@/data/work'
 import '@/styles/work.css'
 
 /** /case-studies: five SEO case studies, each with its own result images. */
@@ -14,6 +14,44 @@ export default function CaseStudiesView() {
           Five client campaigns: the problem, what I did, and the numbers that came back. Select any screenshot to open it full size.
         </p>
       </header>
+
+      <section className="wk__card" aria-labelledby="ts-title">
+        <div className="wk__card-head">
+          <span className="wk__num">Client success</span>
+          <h2 className="wk__card-title" id="ts-title">
+            What clients say
+          </h2>
+        </div>
+        <div className="wk__quotes">
+          {testimonials.map((q) => (
+            <figure className="wk__testimonial" key={`${q.name}-${q.business}`}>
+              <p className="wk__stars" role="img" aria-label={`${q.rating} out of 5 stars`}>
+                <span aria-hidden="true">
+                  {'\u2605'.repeat(q.rating)}
+                  {'\u2606'.repeat(5 - q.rating)}
+                </span>
+                <span className="wk__stars-text">{q.headline}</span>
+              </p>
+              <blockquote className="wk__quote">
+                <p>{q.quote}</p>
+              </blockquote>
+              <figcaption className="wk__who">
+                <strong>{q.name}</strong>
+                <span>{q.business}</span>
+                <span>{q.service}</span>
+                <span>{q.project}</span>
+              </figcaption>
+              <ul className="wk__impact">
+                {q.impact.map((i) => (
+                  <li key={i.label}>
+                    <strong>{i.label}.</strong> {i.text}
+                  </li>
+                ))}
+              </ul>
+            </figure>
+          ))}
+        </div>
+      </section>
 
       <div className="wk__stack">
         {caseStudies.map((c, i) => (

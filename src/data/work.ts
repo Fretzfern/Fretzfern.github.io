@@ -256,6 +256,39 @@ export const caseStudies: CaseStudy[] = [
   },
 ]
 
+/* ---------- Testimonials ---------- */
+
+export type Testimonial = {
+  headline: string
+  /** 1 to 5 */
+  rating: number
+  quote: string
+  name: string
+  business: string
+  service: string
+  project: string
+  impact: { label: string; text: string }[]
+}
+
+/** Add more testimonials to this list and they appear on the Case studies page. */
+export const testimonials: Testimonial[] = [
+  {
+    headline: '5 out of 5 stars for SEO services',
+    rating: 5,
+    quote:
+      'We really appreciated all the work you put into helping our website improve its organic growth and search visibility. Your SEO efforts were very helpful, and we could see the value in the work you were doing for the business. You were professional, knowledgeable, helpful, and easy to communicate with throughout the process. We were very happy with the work you completed and would have no problem recommending you to others looking for SEO services.',
+    name: 'Alfonso',
+    business: 'Kratom Delivery Canada',
+    service: 'Search engine optimization (SEO) and search visibility',
+    project: 'Organic search strategy and technical SEO',
+    impact: [
+      { label: 'Growth', text: 'Increased organic traffic and search engine visibility.' },
+      { label: 'Working together', text: 'Praised for professionalism, knowledge and clear communication.' },
+      { label: 'Verdict', text: 'Would recommend to businesses looking for SEO services.' },
+    ],
+  },
+]
+
 /* ---------- Portfolio ---------- */
 
 export const WIX_PORTFOLIO = 'https://fretzfernff.wixsite.com/portfolio2023/portfolio'

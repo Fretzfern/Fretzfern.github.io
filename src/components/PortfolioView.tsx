@@ -65,7 +65,7 @@ export default function PortfolioView() {
               {g.items.map((r) => (
                 <li className="wk__report" key={r.file}>
                   <img
-                    src={`/reports/${r.file}.png`}
+                    src={`/reports/${r.file}-v2.png`}
                     alt={`${r.title}: ${r.context}`}
                     width={670}
                     height={370}
