@@ -20,7 +20,7 @@ export default function CaseStudiesView() {
         <div className="wk__card-head">
           <span className="wk__num">Client success</span>
           <h2 className="wk__card-title" id="ts-title">
-            What clients say
+            What clients and employers say
           </h2>
         </div>
         <div className="wk__quotes">
@@ -40,17 +40,20 @@ export default function CaseStudiesView() {
               </blockquote>
               <figcaption className="wk__who">
                 <strong>{q.name}</strong>
+                {q.role && <span>{q.role}</span>}
                 <span>{q.business}</span>
-                <span>{q.service}</span>
+                {q.service && <span>{q.service}</span>}
                 {q.project && <span>{q.project}</span>}
               </figcaption>
-              <ul className="wk__impact">
-                {q.impact.map((i) => (
-                  <li key={i.label}>
-                    <strong>{i.label}.</strong> {i.text}
-                  </li>
-                ))}
-              </ul>
+              {q.impact && (
+                <ul className="wk__impact">
+                  {q.impact.map((i) => (
+                    <li key={i.label}>
+                      <strong>{i.label}.</strong> {i.text}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </figure>
           ))}
         </div>
