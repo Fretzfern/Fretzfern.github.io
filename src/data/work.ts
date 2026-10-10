@@ -277,7 +277,7 @@ export const testimonials: Testimonial[] = [
     headline: '5 out of 5 stars for SEO services',
     rating: 5,
     quote: [
-      'We really appreciated all the work you put into helping our website improve its organic growth and search visibility. Your SEO efforts were very helpful, and we could see the value in the work you were doing for the business. You were professional, knowledgeable, helpful, and easy to communicate with throughout the process. We were very happy with the work you completed and would have no problem recommending you to others looking for SEO services.',
+      'We really appreciated all the work Fretz put into helping our website improve its organic growth and search visibility. His SEO efforts were very helpful, and we could see the value in the work he was doing for the business. He was professional, knowledgeable, helpful, and easy to communicate with throughout the process. We were very happy with the work he completed and would have no problem recommending Fretz to others looking for SEO services.',
     ],
     name: 'Alfonso',
     business: 'Kratom Delivery Canada',
@@ -293,9 +293,9 @@ export const testimonials: Testimonial[] = [
     headline: '5 out of 5 stars',
     rating: 5,
     quote: [
-      'Yes, definitely. Our organic reach and local search performance improved significantly since you started doing SEO.',
-      'Professional, responsive, and data-driven. Super easy to communicate with and very reliable. Thanks for all your hard work!',
-      'Overall I am very happy with your work. Since you started, results have improved. You have listened to our suggestions and worked on them to achieve results. I am looking forward to seeing improved results on opportunities. Thank you!',
+      'Fretz has improved our organic reach and local search performance significantly since he started doing SEO for us.',
+      'Fretz is professional, responsive, and data-driven. He is super easy to communicate with and very reliable. Thanks, Fretz, for all your hard work!',
+      'Overall I am very happy with Fretz\'s work. Since he started, results have improved. He has listened to our suggestions and worked on them to achieve results. I am looking forward to seeing improved results on opportunities. Thank you!',
     ],
     name: 'Faisal',
     business: 'Travel Time Taxi and Limo',
