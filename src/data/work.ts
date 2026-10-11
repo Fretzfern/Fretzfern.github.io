@@ -355,10 +355,10 @@ export const CV_URL = '/Fretz-Fernandez-CV.pdf'
 export type FeaturedSite = { name: string; note: string; src: string }
 
 export const featuredSites: FeaturedSite[] = [
-  { name: 'Kratom Delivery Canada', note: 'E-commerce, GTA and Canada-wide delivery', src: '/work/site-kratom-delivery.jpg' },
-  { name: 'AJT Roofing & Contracting', note: 'Local service website', src: '/work/site-ajt-roofing.jpg' },
-  { name: 'Cloud Pharmacy', note: 'Online pharmacy services', src: '/work/site-cloud-pharmacy.jpg' },
-  { name: 'Halifax Airport Taxi & Limousine', note: 'Transport service website', src: '/work/site-halifax-taxi.jpg' },
+  { name: 'Kratom Delivery Canada', note: 'E-commerce, GTA and Canada-wide delivery', src: '/work/site-kratom-delivery.png' },
+  { name: 'AJT Roofing & Contracting', note: 'Local service website', src: '/work/site-ajt-roofing.png' },
+  { name: 'Cloud Pharmacy', note: 'Online pharmacy services', src: '/work/site-cloud-pharmacy.png' },
+  { name: 'Halifax Airport Taxi & Limousine', note: 'Transport service website', src: '/work/site-halifax-taxi.png' },
 ]
 
 export type Sample = { name: string; id: string; w: number; h: number; about: string }
@@ -457,7 +457,8 @@ export const roles: Role[] = [
 /* ---------- Reports and analytics ---------- */
 
 export type Report = {
-  file: string
+  /** One or more cropped screenshots from the same report. */
+  files: string[]
   title: string
   /** The tool and site the screenshot comes from. */
   context: string
@@ -474,7 +475,7 @@ export const reportGroups: ReportGroup[] = [
     lede: 'Rank tracking in SE Ranking: where the keywords started and where they sit now.',
     items: [
       {
-        file: 'rank-tracker-halifax-taxi',
+        files: ['rank-tracker-halifax-taxi-1-v3', 'rank-tracker-halifax-taxi-2-v3'],
         title: 'Airport taxi searches take the top spots',
         context: 'SE Ranking and Search Console · Travel Time Taxi',
         shows: 'Keyword positions for the Travel Time Taxi website, with last month of Search Console data underneath.',
@@ -483,7 +484,7 @@ export const reportGroups: ReportGroup[] = [
           'Top 3 keywords reached 40 (+34), Top 10 reached 64 (+55), and search visibility hit 53.7% (+52.3). "Halifax taxi from airport" (390 searches) sits at #1. Last month brought 213 clicks from 20.2K impressions at an average position of 4.7.',
       },
       {
-        file: 'rank-tracker-visibility',
+        files: ['rank-tracker-visibility-1-v3'],
         title: 'From position 100 to the low 30s, and holding',
         context: 'SE Ranking · Cloud Pharmacy, Google Canada (Toronto)',
         shows: 'Average position over time for Cloud Pharmacy\'s 116 tracked keywords, from a March 2025 baseline to October 2026.',
@@ -492,7 +493,7 @@ export const reportGroups: ReportGroup[] = [
           'Average position moved from around 100 at baseline to 32 and has held since late 2025. Search visibility is 45 (+27), 43% of keywords are in the Top 10 (+9), and the traffic forecast is 19,977 (+5,806).',
       },
       {
-        file: 'rank-tracker-pharmacy',
+        files: ['rank-tracker-pharmacy-1-v3'],
         title: 'Local pharmacy terms at #1 to #3',
         context: 'SE Ranking · Cloud Pharmacy',
         shows: 'Cloud Pharmacy\'s tracked keywords with their positions three months ago, last month and today.',
@@ -501,7 +502,7 @@ export const reportGroups: ReportGroup[] = [
           '"Compliance Packaging Toronto" and "Medication Synchronization Toronto" are at #1. "cloud pharmacy toronto", "small pharmacy near me" and "compounded pharmacy near me" are at #2. "Prescription medication Toronto" climbed from 22 to 2 in three months.',
       },
       {
-        file: 'rank-tracker-bus-charter',
+        files: ['rank-tracker-bus-charter-1-v3'],
         title: 'Bus charter keywords reach page one',
         context: 'SE Ranking · Brown Coach Line',
         shows: '131 tracked keywords for Brown Coach Line, a coach and bus rental service around Toronto and the GTA.',
@@ -516,7 +517,7 @@ export const reportGroups: ReportGroup[] = [
     lede: 'Audits and speed tests: the groundwork that lets the content rank.',
     items: [
       {
-        file: 'pagespeed-halifax-blog',
+        files: ['pagespeed-halifax-blog-1-v3', 'pagespeed-halifax-blog-2-v3'],
         title: 'Perfect speed score on mobile and desktop',
         context: 'PageSpeed Insights · Travel Time Taxi blog',
         shows: 'PageSpeed Insights results for one blog article, mobile on the left and desktop on the right.',
@@ -524,7 +525,7 @@ export const reportGroups: ReportGroup[] = [
         result: 'Performance 100, Best Practices 100 and SEO 100 on both devices, with Accessibility at 92.',
       },
       {
-        file: 'competitors-and-audit-halifax',
+        files: ['competitors-and-audit-halifax-1-v3', 'competitors-and-audit-halifax-2-v3'],
         title: 'Competitor benchmark and a 95/100 site health',
         context: 'SE Ranking · Travel Time Taxi',
         shows: 'Competitive research for Canada next to the site audit of the same website.',
@@ -533,7 +534,7 @@ export const reportGroups: ReportGroup[] = [
           'Organic traffic is 236 (+47) across 510 organic keywords (+21). Site health is 95/100 over 198 pages, with 185 healthy and 2 errors. SE Ranking\'s marketing plan lists 65 tasks that are my queue for the next round.',
       },
       {
-        file: 'page-level-crawl-halifax',
+        files: ['page-level-crawl-halifax-1-v3'],
         title: 'Page-level crawl: what earns keywords',
         context: 'SE Ranking audit · Travel Time Taxi',
         shows: 'Every page with its traffic, indexability, depth and keyword count.',
@@ -542,7 +543,7 @@ export const reportGroups: ReportGroup[] = [
           'The homepage ranks for 490 keywords, and comparison posts such as "Uber vs taxi" rank for 48 and 63. Nearly every page is indexable with a 200 status. One services page is flagged non-canonical, the kind of detail I triage.',
       },
       {
-        file: 'site-audit-and-backlinks',
+        files: ['site-audit-and-backlinks-1-v3', 'site-audit-and-backlinks-2-v3'],
         title: 'Health score 98 and a clean link profile',
         context: 'SE Ranking · Brown Coach Line audit and backlinks',
         shows: 'The audit health score and issue breakdown above, the backlink profile below.',
@@ -557,7 +558,7 @@ export const reportGroups: ReportGroup[] = [
     lede: 'What visitors do once they arrive, and how the pages appear in Google.',
     items: [
       {
-        file: 'gsc-august-impressions',
+        files: ['gsc-august-impressions-1-v3'],
         title: '300K impressions at average position 8.9',
         context: 'Google Search Console · Cloud Pharmacy, August 2026',
         shows: 'A month of Search Console data: clicks, impressions, click-through rate and average position.',
@@ -566,7 +567,7 @@ export const reportGroups: ReportGroup[] = [
           '1.3K clicks from 302.1K impressions at an average position of 8.9. The 0.4% click-through rate shows where title and snippet testing pays off next.',
       },
       {
-        file: 'gsc-and-ai-features',
+        files: ['gsc-and-ai-features-1-v3', 'gsc-and-ai-features-2-v3'],
         title: 'Showing up in AI-generated answers',
         context: 'Google Search Console · Brown Coach Line, Web and Generative AI features',
         shows: 'Web performance for August 2026, with the new Generative AI features report below it.',
@@ -575,7 +576,7 @@ export const reportGroups: ReportGroup[] = [
           'Web: 54 clicks from 15.6K impressions at average position 39.3. AI features: 3.89K impressions over three months, rising from around 50 a day to a peak above 130 in late September.',
       },
       {
-        file: 'ga4-engagement-overview',
+        files: ['ga4-engagement-overview-1-v3'],
         title: '92% engagement and 202 conversions',
         context: 'Google Analytics 4 · Cloud Pharmacy, August 2026',
         shows: 'The audience report for a month: sessions, users, views, engagement and conversions.',
@@ -583,7 +584,7 @@ export const reportGroups: ReportGroup[] = [
         result: '1.8K sessions, 1.6K users and 4.7K views, with a 92.32% engagement rate and 202 conversions.',
       },
       {
-        file: 'ga4-baseline',
+        files: ['ga4-baseline-1-v3'],
         title: 'A baseline to build on',
         context: 'Google Analytics 4 · Brown Coach Line',
         shows: '538 sessions and 509 users, with 15 conversions, a 36.43% engagement rate and 13 seconds of average engagement.',
@@ -598,7 +599,7 @@ export const reportGroups: ReportGroup[] = [
     lede: 'Google Business Profile reach and the directory links that support it.',
     items: [
       {
-        file: 'gbp-pharmacy-reach',
+        files: ['gbp-pharmacy-reach-1-v3', 'gbp-pharmacy-reach-2-v3'],
         title: '58,982 profile views from local search',
         context: 'Google Business Profile · Cloud Pharmacy, May to October 2026',
         shows: 'How people find a pharmacy\'s profile, on which platform, and what they search.',
@@ -607,7 +608,7 @@ export const reportGroups: ReportGroup[] = [
           '58,982 profile views (50% from Google Maps on mobile, 35% from Search on mobile), 3,299 interactions and 31,748 searches that showed the profile. The top terms are "pharmacy" (17K) and "pharmacy near me" (3,616). October is a partial month, which explains the final dip.',
       },
       {
-        file: 'gbp-monthly-interactions',
+        files: ['gbp-monthly-interactions-1-v3', 'gbp-monthly-interactions-2-v3'],
         title: 'Profile interactions across two clients',
         context: 'Google Business Profile · Kratom Delivery Canada (May) and Travel Time Taxi (July) 2026',
         shows: 'Business Profile interactions for two clients in two different months.',
@@ -615,7 +616,7 @@ export const reportGroups: ReportGroup[] = [
         result: '356 interactions for Kratom Delivery Canada in May 2026 and 159 for Travel Time Taxi in July 2026.',
       },
       {
-        file: 'backlinks-citations',
+        files: ['backlinks-citations-1-v3'],
         title: 'Clean links from directories and clinics',
         context: 'SE Ranking backlink checker · Cloud Pharmacy',
         shows: 'New backlinks pointing at a pharmacy\'s website, with their authority and toxicity scores.',

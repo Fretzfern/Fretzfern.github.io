@@ -130,3 +130,7 @@
 
 .wk__shots { align-items: start; }
 @media (min-width: 900px) { .wk__shots--multi { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Cropped report screenshots */
+.wk__report-media { display: grid; gap: 8px; padding: 12px 12px 0; }
+.wk__report-media .zi { border-radius: 10px; box-shadow: 0 0 0 1px var(--line); }

@@ -57,13 +57,22 @@ export default function PortfolioView() {
             <p className="wk__p">{g.lede}</p>
             <ul className="wk__reports">
               {g.items.map((r) => (
-                <li className="wk__report" key={r.file}>
-                  <ZoomImage
-                    src={`/reports/${r.file}-v2.png`}
-                    alt={`${r.title}: ${r.context}`}
-                    title={r.title}
-                    detail={r.context}
-                  />
+                <li className="wk__report" key={r.files[0]}>
+                  <div className="wk__report-media">
+                    {r.files.map((f, i) => (
+                      <ZoomImage
+                        key={f}
+                        src={`/reports/${f}.png`}
+                        alt={
+                          r.files.length > 1
+                            ? `${r.title}: ${r.context} (${i + 1} of ${r.files.length})`
+                            : `${r.title}: ${r.context}`
+                        }
+                        title={r.title}
+                        detail={r.context}
+                      />
+                    ))}
+                  </div>
                   <div className="wk__report-body">
                     <h4 className="wk__report-title">{r.title}</h4>
                     <span className="wk__report-ctx">{r.context}</span>

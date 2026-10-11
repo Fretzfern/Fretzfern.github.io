@@ -36,9 +36,9 @@ import type { Icon as PhosphorIcon } from '@/components/slab'
  */
 
 const PROJECT_SHOTS = [
-  '/work/site-kratom-delivery.jpg',
+  '/work/site-kratom-delivery.png',
   '/work/cs-kratom-dashboard.jpg',
-  '/work/site-ajt-roofing.jpg',
+  '/work/site-ajt-roofing.png',
   '/work/cs-pharmacy-dashboard.jpg',
 ]
 
