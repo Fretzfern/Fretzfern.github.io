@@ -385,34 +385,6 @@ export const sampleProjects: Sample[] = [
 export const sampleImage = (p: Sample) =>
   `https://static.wixstatic.com/media/e6fe4c_${p.id}~mv2.png/v1/fill/w_${p.w},h_${p.h},al_c/e6fe4c_${p.id}~mv2.png`
 
-const RESULT_IDS = [
-  '67a73d5609c3491b848c8ad86d0a437f',
-  '9f1aca7e373d451e80ce9c585238a982',
-  'c790db00e5ac48b08fc0f59206f4b9ca',
-  '8ffa5e3d111c418e8d2df7336a90da14',
-  '597b8b711fe04091869791d36d9f5c52',
-  '235c7ff237a441b29a09e6150e0c5967',
-  '4630dc04db4b430b82b95516cf0d4aea',
-  '2f785c3d26aa4d928a654084a27da0f6',
-  '6d2446c2622343c798ce59475f315cfa',
-  'cd4a923a52fe4288b17f74db2b14135c',
-  '1e6666a4f8484f89a0ac5c1d39ef178d',
-  '5a9d3fd781fe4573917eb6a4b6edea8e',
-  'c717d30f675e44719793fd9f360553e2',
-  '2dd718ae962d4221820626e5c97296e2',
-  '8daa2787c02344ee9cb4c30b08fdf7c1',
-  'c7ecdd3c507b475bb32c53bc9d94f898',
-  '36c68e1652df48e09fb404e05803748c',
-  'c3040dd155374531906807ba55c4fa53',
-  '53d699534e9c4b4c9d1e6a787f90699b',
-]
-
-/** Result screenshots, loaded straight from the Wix portfolio. */
-export const resultShots: string[] = RESULT_IDS.map(
-  (id) =>
-    `https://static.wixstatic.com/media/e6fe4c_${id}~mv2.jpg/v1/fill/w_945,h_421,q_90,enc_avif,quality_auto/e6fe4c_${id}~mv2.jpg`,
-)
-
 /* ---------- Experience (from the resume) ---------- */
 
 export type Role = { title: string; company: string; years: string; logo?: string; body: string }

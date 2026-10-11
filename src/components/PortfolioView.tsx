@@ -1,5 +1,5 @@
 import ZoomImage from '@/components/ZoomImage'
-import { CV_URL, featuredSites, reportGroups, resultShots, sampleImage, sampleProjects } from '@/data/work'
+import { CV_URL, featuredSites, reportGroups, sampleImage, sampleProjects } from '@/data/work'
 import '@/styles/work.css'
 
 /** /portfolio: websites worked on, the full sample list, and result screenshots. */
@@ -91,17 +91,6 @@ export default function PortfolioView() {
             </ul>
           </section>
         ))}
-      </div>
-
-      <div className="wk__card">
-        <h2 className="wk__card-title">Project results</h2>
-        <ul className="wk__gallery">
-          {resultShots.map((src, i) => (
-            <li key={src}>
-              <ZoomImage src={src} alt={`Project result screenshot ${i + 1}`} noReferrer />
-            </li>
-          ))}
-        </ul>
       </div>
     </section>
   )
