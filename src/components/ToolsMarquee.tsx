@@ -57,6 +57,10 @@ export const tools: Tool[] = [
   { name: 'Wix', what: 'Website management, on-page SEO and optimization', iconPath: '/icons/tools/wix.svg' },
   { name: 'Shopify', what: 'E-commerce SEO, on-page optimization and website management', iconPath: '/icons/tools/shopify.svg' },
   { name: 'HTML & CSS', what: 'Basic website customization and responsive design', iconPath: '/icons/tools/css.svg' },
+  { name: 'Gemini', what: 'Google\'s AI assistant', iconPath: '/icons/tools/gemini.svg' },
+  { name: 'ChatGPT', what: 'OpenAI\'s AI assistant', iconPath: '/icons/tools/chatgpt.svg' },
+  { name: 'Claude', what: 'Anthropic\'s AI assistant', iconPath: '/icons/tools/claude.svg' },
+  { name: 'Perplexity', what: 'AI answer engine with cited sources', iconPath: '/icons/tools/perplexity.svg' },
 ]
 
 export default function ToolsMarquee() {

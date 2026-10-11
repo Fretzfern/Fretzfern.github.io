@@ -74,6 +74,7 @@ const AI_BUILDS: Skill[] = [
   { id: 'frog', name: 'Screaming Frog', Icon: MagnifyingGlass },
   { id: 'yoast', name: 'Yoast · Rank Math', Icon: Code },
   { id: 'cms', name: 'WordPress · Wix · Shopify', Icon: Browser },
+  { id: 'ai', name: 'Gemini · ChatGPT · Claude · Perplexity', Icon: Robot },
 ]
 
 function CardHead({
