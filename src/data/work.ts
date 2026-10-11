@@ -104,10 +104,12 @@ export const caseStudies: CaseStudy[] = [
     shots: [
       { src: '/cases/ajt-crawl-comparison.jpg', alt: 'AJT Roofing site audit comparison: errors cleared from 14 to 0' },
       { src: '/cases/ajt-top-keywords.jpg', alt: 'AJT Roofing top, jumped and dropped keywords' },
-      { src: '/cases/ajt-gbp-performance.jpg', alt: 'AJT Roofing Business Profile interactions, October and November 2025' },
-      { src: '/cases/ajt-gbp-discovery.jpg', alt: 'How people discovered the AJT Roofing Business Profile' },
-      { src: '/cases/ajt-search-console.jpg', alt: 'AJT Roofing Search Console data, October versus November 2025' },
-      { src: '/cases/ajt-search-console-queries.jpg', alt: 'AJT Roofing top queries, top pages and Search Console milestones' },
+      { src: '/cases/ajt-gbp-october.jpg', alt: 'AJT Roofing Business Profile interactions, October 2025' },
+      { src: '/cases/ajt-gbp-november.jpg', alt: 'AJT Roofing Business Profile interactions, November 2025' },
+      { src: '/cases/ajt-views-october.jpg', alt: 'AJT Roofing Business Profile views and searches, October 2025' },
+      { src: '/cases/ajt-views-november.jpg', alt: 'AJT Roofing Business Profile views and searches, November 2025' },
+      { src: '/cases/ajt-gsc-october.jpg', alt: 'AJT Roofing Search Console data, October 2025' },
+      { src: '/cases/ajt-gsc-november.jpg', alt: 'AJT Roofing Search Console data, November 2025' },
     ],
   },
   {
@@ -195,12 +197,14 @@ export const caseStudies: CaseStudy[] = [
     next:
       'Over the last three months clicks and impressions eased (744 to 612 clicks) and average position moved from 11.9 to 14.3. The next round targets click-through with sharper titles and descriptions, pushing "Halifax airport transportation" from #6 into the top 3, and closing the year-on-year Business Profile gap with reviews and Maps-focused posts.',
     shots: [
-      { src: '/cases/ttt-analytics-overview.jpg', alt: 'Travel Time Taxi Google Analytics overview, August versus September 2026' },
-      { src: '/cases/ttt-organic-sources.jpg', alt: 'Travel Time Taxi organic traffic sources, August versus September 2026' },
+      { src: '/cases/ttt-ga-august.jpg', alt: 'Travel Time Taxi Google Analytics overview, August 2026' },
+      { src: '/cases/ttt-ga-september.jpg', alt: 'Travel Time Taxi Google Analytics overview, September 2026' },
+      { src: '/cases/ttt-organic-august.jpg', alt: 'Travel Time Taxi organic traffic sources, August 2026' },
+      { src: '/cases/ttt-organic-september.jpg', alt: 'Travel Time Taxi organic traffic sources, September 2026' },
       { src: '/cases/ttt-keyword-rankings.jpg', alt: 'Travel Time Taxi keyword rankings table' },
       { src: '/cases/ttt-top-keywords.jpg', alt: 'Travel Time Taxi top, jumped and dropped keywords' },
-      { src: '/cases/ttt-gbp-discovery.jpg', alt: 'How people discovered the Travel Time Taxi Business Profile' },
-      { src: '/cases/ttt-gbp-posts.jpg', alt: 'Travel Time Taxi Google Business Profile posts' },
+      { src: '/cases/ttt-gbp-august.jpg', alt: 'How people discovered the Travel Time Taxi Business Profile, August 2026' },
+      { src: '/cases/ttt-gbp-september.jpg', alt: 'How people discovered the Travel Time Taxi Business Profile, September 2026' },
     ],
   },
   {
@@ -248,8 +252,9 @@ export const caseStudies: CaseStudy[] = [
     shots: [
       { src: '/cases/bcl-ranking-overview.jpg', alt: 'Brown Coach Line keyword ranking overview' },
       { src: '/cases/bcl-top-keywords.jpg', alt: 'Brown Coach Line top, jumped and dropped keywords' },
-      { src: '/cases/bcl-search-console.jpg', alt: 'Brown Coach Line Search Console data, July to August versus August to September' },
+      { src: '/cases/bcl-search-console.jpg', alt: 'Brown Coach Line Search Console data' },
       { src: '/cases/bcl-crawl-comparison.jpg', alt: 'Brown Coach Line site audit comparison' },
+      { src: '/cases/bcl-referring-domain-trends.jpg', alt: 'Brown Coach Line referring domain trends' },
       { src: '/cases/bcl-referring-domains.jpg', alt: 'Brown Coach Line referring domains' },
       { src: '/cases/bcl-blog-posts.jpg', alt: 'New Brown Coach Line blog posts' },
     ],

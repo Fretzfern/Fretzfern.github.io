@@ -127,3 +127,6 @@
 
 @media (min-width: 900px) { .wk__quotes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .wk__quote p + p { margin-top: 10px; }
+
+.wk__shots { align-items: start; }
+@media (min-width: 900px) { .wk__shots--multi { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
