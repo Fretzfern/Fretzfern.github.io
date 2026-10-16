@@ -115,8 +115,8 @@ const frag = `
     // Theme colors (kept identical to v1 so the rest of the page does not shift).
     vec3 bgLight   = vec3(0.957, 0.957, 0.929); // #F4F4ED cream
     vec3 lineLight = vec3(0.46,  0.46,  0.46);  // soft neutral gray contour on cream
-    vec3 bgDark    = vec3(0.024, 0.047, 0.102); // #060C1A navy ink
-    vec3 lineDark  = vec3(1.0,   1.0,   1.0);   // solid white on navy (black would be invisible)
+    vec3 bgDark    = vec3(0.0,   0.0,   0.0);   // #000000 black
+    vec3 lineDark  = vec3(1.0,   0.48,  0.10);  // brand orange contour on black
 
     vec3 bg      = mix(bgLight, bgDark, uDarkMix);
     vec3 lineCol = mix(lineLight, lineDark, uDarkMix);
@@ -128,7 +128,7 @@ const frag = `
     // the contours read as a warm beige tint rather than stark black. The lower
     // contrast also hides most of the half-res upscale aliasing. Dark sections
     // use white lines on navy, kept legible at a similar low alpha.
-    float lineAlpha = line * mix(0.55, 0.45, uDarkMix);
+    float lineAlpha = line * mix(0.55, 0.30, uDarkMix);
     vec3 color = mix(bg, lineCol, lineAlpha);
 
     gl_FragColor = vec4(color, 1.0);

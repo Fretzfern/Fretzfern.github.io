@@ -129,7 +129,7 @@
   background: var(--n8n-node);
   border: 1.5px solid var(--n8n-border);
   color: var(--n8n-ink);
-  box-shadow: 0 6px 14px -8px rgba(6, 12, 26, 0.35);
+  box-shadow: 0 6px 14px -8px rgba(12, 12, 12, 0.35);
   transition: border-color 260ms var(--ease-out);
 }
 /* n8n's trigger tile: rounded on the input side, square on the output side. */
