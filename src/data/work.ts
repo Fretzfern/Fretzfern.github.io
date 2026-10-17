@@ -286,7 +286,7 @@ export const testimonials: Testimonial[] = [
     headline: '5 out of 5 stars for SEO services',
     rating: 5,
     quote: [
-      'We really appreciated all the work Fretz put into helping our website improve its organic growth and search visibility. His SEO efforts were very helpful, and we could see the value in the work he was doing for the business. He was professional, knowledgeable, helpful, and easy to communicate with throughout the process. We were very happy with the work he completed and would have no problem recommending Fretz to others looking for SEO services.',
+      'We really appreciated all the work Fretz put into helping our website improve its organic growth and search visibility. His SEO efforts were very helpful, and we could see the value in the work he was doing for the business. He was professional, knowledgeable, helpful, and easy to communicate with throughout the process. We were very happy with the work he completed and would have no problem recommending him to others looking for SEO services.',
     ],
     teaser: 'We really appreciated all the work Fretz put into helping our website improve its organic growth and search visibility.',
     name: 'Alfonso',
@@ -304,8 +304,8 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     quote: [
       'Fretz has improved our organic reach and local search performance significantly since he started doing SEO for us.',
-      'Fretz is professional, responsive, and data-driven. He is super easy to communicate with and very reliable. Thanks, Fretz, for all your hard work!',
-      'Overall I am very happy with Fretz\'s work. Since he started, results have improved. He has listened to our suggestions and worked on them to achieve results. I am looking forward to seeing improved results on opportunities. Thank you!',
+      'He is professional, responsive, and data-driven. He is super easy to communicate with and very reliable. Thanks for all his hard work!',
+      'Overall I am very happy with his work. Since he started, results have improved. He has listened to our suggestions and worked on them to achieve results. I am looking forward to seeing improved results on opportunities. Thank you!',
     ],
     teaser: 'Fretz has improved our organic reach and local search performance significantly since he started doing SEO for us.',
     name: 'Faisal',
@@ -322,7 +322,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     quote: [
       'Fretz was an indispensable part of the JNB Web Promotion team during his three years with us as a Junior SEO Specialist. Handling a demanding portfolio of multiple client accounts at once, he showed a rare level of discipline and adaptability.',
-      'From meticulous on-site optimizations to solid off-site strategies, Fretz consistently delivered measurable rank improvements and steady organic growth across diverse industries. He took complete ownership of his accounts and balanced competing priorities with ease. Any team or client would be lucky to have his dedication and SEO expertise.',
+      'From meticulous on-site optimizations to solid off-site strategies, he consistently delivered measurable rank improvements and steady organic growth across diverse industries. He took complete ownership of his accounts and balanced competing priorities with ease. Any team or client would be lucky to have his dedication and SEO expertise.',
     ],
     name: 'John Bertrand',
     role: 'Owner',
@@ -334,7 +334,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     quote: [
       'Fretz is an absolute powerhouse. He manages our client accounts across the US, Canada, and Australia with ease, across completely different niches. From technical, on-site, and off-site SEO to GBP management, social posting, and DNS audits, he handles the full spectrum.',
-      'What sets him apart is his initiative. When our web developers were tied up, Fretz researched and resolved complex SEO plugin errors on his own. He is reliable, proactive, and essential to Volfyre Digital.',
+      'What sets him apart is his initiative. When our web developers were tied up, he researched and resolved complex SEO plugin errors on his own. He is reliable, proactive, and essential to Volfyre Digital.',
     ],
     name: 'Archy',
     role: 'Founder and Owner',
