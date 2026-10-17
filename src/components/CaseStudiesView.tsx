@@ -1,9 +1,23 @@
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import ZoomImage from '@/components/ZoomImage'
 import { caseStudies, testimonials } from '@/data/work'
 import '@/styles/work.css'
 
 /** /case-studies: five SEO case studies, each with its own result images. */
 export default function CaseStudiesView() {
+  const { hash } = useLocation()
+
+  // The shell resets the panel's scroll on every route change, so wait a beat
+  // and then bring the linked section into view.
+  useEffect(() => {
+    if (hash !== '#client-reviews') return
+    const id = window.setTimeout(() => {
+      document.getElementById('client-reviews')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 120)
+    return () => window.clearTimeout(id)
+  }, [hash])
+
   return (
     <section className="wk" aria-labelledby="cs-title">
       <header className="wk__head">
@@ -16,7 +30,7 @@ export default function CaseStudiesView() {
         </p>
       </header>
 
-      <section className="wk__card" aria-labelledby="ts-title">
+      <section className="wk__card" id="client-reviews" aria-labelledby="ts-title">
         <div className="wk__card-head">
           <span className="wk__num">Client success</span>
           <h2 className="wk__card-title" id="ts-title">

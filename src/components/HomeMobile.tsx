@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { SealCheck, CaretRight, Stack, Coffee } from '@/components/slab'
 import { profile } from '@/data/profile'
+import { testimonials } from '@/data/work'
 import QuickMenu from './QuickMenu'
 
 /**
@@ -46,6 +47,8 @@ export function HomeStats() {
   )
 }
 
+const featured = testimonials.find((q) => q.teaser)
+
 const TILES = [
   { n: '01', label: 'Case studies', to: '/case-studies', title: 'Five SEO case studies', desc: 'The problem, the work, the numbers.', img: '/work/site-kratom-delivery.png' },
   { n: '02', label: 'Services', to: '/services', title: 'SEO and WordPress, end to end', desc: 'Audits, local SEO, schema, site builds.', Icon: Stack },
@@ -82,21 +85,28 @@ export function HomeExplore() {
       {/* A header that links carries its chevron on the title itself. */}
       <div className="hsec">
         <h2 className="hsec__title">
-          <Link to="/experience" className="hsec__link">
+          <Link to="/case-studies#client-reviews" className="hsec__link">
             What clients say
             <CaretRight size={16} weight="bold" aria-hidden="true" />
           </Link>
         </h2>
       </div>
-      <Link to="/experience" className="hproof" aria-label="Current role: Senior SEO Specialist at Canadian Web Designs.">
-        <span className="hproof__stage">
-          <img src={profile.avatarSrc} alt="" loading="lazy" />
-        </span>
-        <span className="hproof__copy">
-          <span className="hproof__title">Senior SEO Specialist, Canadian Web Designs</span>
-          <span className="hproof__meta">2024 - 2026</span>
-        </span>
-      </Link>
+      {featured && (
+        <Link
+          to="/case-studies#client-reviews"
+          className="hproof"
+          aria-label={`Read client reviews. ${featured.name}, ${featured.business}: ${featured.teaser}`}
+        >
+          <span className="hproof__stage hproof__stage--quote">
+            <span className="hproof__stars" aria-hidden="true">{'\u2605'.repeat(featured.rating)}</span>
+            <span className="hproof__quote">{`\u201C${featured.teaser}\u201D`}</span>
+          </span>
+          <span className="hproof__copy">
+            <span className="hproof__title">{featured.name}, {featured.business}</span>
+            <span className="hproof__meta">Read all client reviews</span>
+          </span>
+        </Link>
+      )}
     </>
   )
 }

@@ -267,6 +267,8 @@ export type Testimonial = {
   headline: string
   /** 1 to 5 */
   rating: number
+  /** A short pull-quote for small cards. */
+  teaser?: string
   /** One entry per paragraph. */
   quote: string[]
   name: string
@@ -286,6 +288,7 @@ export const testimonials: Testimonial[] = [
     quote: [
       'We really appreciated all the work Fretz put into helping our website improve its organic growth and search visibility. His SEO efforts were very helpful, and we could see the value in the work he was doing for the business. He was professional, knowledgeable, helpful, and easy to communicate with throughout the process. We were very happy with the work he completed and would have no problem recommending Fretz to others looking for SEO services.',
     ],
+    teaser: 'We really appreciated all the work Fretz put into helping our website improve its organic growth and search visibility.',
     name: 'Alfonso',
     business: 'Kratom Delivery Canada',
     service: 'Search engine optimization (SEO) and search visibility',
@@ -304,6 +307,7 @@ export const testimonials: Testimonial[] = [
       'Fretz is professional, responsive, and data-driven. He is super easy to communicate with and very reliable. Thanks, Fretz, for all your hard work!',
       'Overall I am very happy with Fretz\'s work. Since he started, results have improved. He has listened to our suggestions and worked on them to achieve results. I am looking forward to seeing improved results on opportunities. Thank you!',
     ],
+    teaser: 'Fretz has improved our organic reach and local search performance significantly since he started doing SEO for us.',
     name: 'Faisal',
     business: 'Travel Time Taxi and Limo',
     service: 'Search engine optimization (SEO) and local search',
