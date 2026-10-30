@@ -264,9 +264,9 @@ export const caseStudies: CaseStudy[] = [
 /* ---------- Testimonials ---------- */
 
 export type Testimonial = {
-  headline: string
-  /** 1 to 5 */
-  rating: number
+  headline?: string
+  /** 1 to 5. Leave out when the client gave no rating. */
+  rating?: number
   /** A short pull-quote for small cards. */
   teaser?: string
   /** One entry per paragraph. */
@@ -316,6 +316,14 @@ export const testimonials: Testimonial[] = [
       { label: 'Working together', text: 'Professional, responsive, data-driven and very reliable.' },
       { label: 'Feedback', text: 'Listened to suggestions and worked on them to achieve results.' },
     ],
+  },
+  {
+    quote: [
+      'Fretz was a great help to us in improving our SEO. Frankly, for the first time we could see our organic listing on the first page. We are thankful for how hard he worked to make it happen for us.',
+      'People with his skills and service are hard to find, and he will be a great asset to any company.',
+    ],
+    name: 'Shawn',
+    business: 'Brown Coach Line',
   },
   {
     headline: '5 out of 5 stars',
