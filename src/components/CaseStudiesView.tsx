@@ -40,13 +40,15 @@ export default function CaseStudiesView() {
         <div className="wk__quotes">
           {testimonials.map((q) => (
             <figure className="wk__testimonial" key={`${q.name}-${q.business}`}>
-              <p className="wk__stars" role="img" aria-label={`${q.rating} out of 5 stars`}>
-                <span aria-hidden="true">
-                  {'\u2605'.repeat(q.rating)}
-                  {'\u2606'.repeat(5 - q.rating)}
-                </span>
-                <span className="wk__stars-text">{q.headline}</span>
-              </p>
+              {q.rating && (
+                <p className="wk__stars" role="img" aria-label={`${q.rating} out of 5 stars`}>
+                  <span aria-hidden="true">
+                    {'\u2605'.repeat(q.rating)}
+                    {'\u2606'.repeat(5 - q.rating)}
+                  </span>
+                  {q.headline && <span className="wk__stars-text">{q.headline}</span>}
+                </p>
+              )}
               <blockquote className="wk__quote">
                 {q.quote.map((para) => (
                   <p key={para}>{para}</p>
