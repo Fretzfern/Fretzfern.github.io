@@ -264,9 +264,9 @@ export const caseStudies: CaseStudy[] = [
 /* ---------- Testimonials ---------- */
 
 export type Testimonial = {
-  headline?: string
-  /** 1 to 5. Leave out when the client gave no rating. */
-  rating?: number
+  headline: string
+  /** 1 to 5 */
+  rating: number
   /** A short pull-quote for small cards. */
   teaser?: string
   /** One entry per paragraph. */
@@ -318,6 +318,9 @@ export const testimonials: Testimonial[] = [
     ],
   },
   {
+    // Shawn gave no star rating, so rating is 0 and no stars are shown.
+    headline: '',
+    rating: 0,
     quote: [
       'Fretz was a great help to us in improving our SEO. Frankly, for the first time we could see our organic listing on the first page. We are thankful for how hard he worked to make it happen for us.',
       'People with his skills and service are hard to find, and he will be a great asset to any company.',
