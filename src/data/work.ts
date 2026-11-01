@@ -318,9 +318,8 @@ export const testimonials: Testimonial[] = [
     ],
   },
   {
-    // Shawn gave no star rating, so rating is 0 and no stars are shown.
-    headline: '',
-    rating: 0,
+    headline: '5 out of 5 stars',
+    rating: 5,
     quote: [
       'Fretz was a great help to us in improving our SEO. Frankly, for the first time we could see our organic listing on the first page. We are thankful for how hard he worked to make it happen for us.',
       'People with his skills and service are hard to find, and he will be a great asset to any company.',
