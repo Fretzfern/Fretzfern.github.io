@@ -61,6 +61,8 @@ export const tools: Tool[] = [
   { name: 'ChatGPT', what: 'OpenAI\'s AI assistant', iconPath: '/icons/tools/chatgpt.svg' },
   { name: 'Claude', what: 'Anthropic\'s AI assistant', iconPath: '/icons/tools/claude.svg' },
   { name: 'Perplexity', what: 'AI answer engine with cited sources', iconPath: '/icons/tools/perplexity.svg' },
+  { name: 'Moz Pro / Moz Free SEO Tools', what: 'Keyword research, domain authority and link analysis', iconPath: '/icons/tools/moz.svg' },
+  { name: 'BrightLocal', what: 'Local SEO: citations, local rank tracking and review management', iconPath: '/icons/tools/brightlocal.svg' },
 ]
 
 export default function ToolsMarquee() {
