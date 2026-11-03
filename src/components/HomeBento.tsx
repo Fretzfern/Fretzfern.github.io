@@ -122,7 +122,7 @@ export default function HomeBento() {
 
       {/* About: a short note about me. */}
       <Link to="/about" className="bento__card bento__card--about">
-        <CardHead Icon={User} title="About" desc="Seven years of SEO and web design." />
+        <CardHead Icon={User} title="About" desc="Nine years of SEO and web design." />
         <div className="bento__media bento__aboutme">
           <img className="bento__aboutme-photo" src={profile.avatarSrc} alt="" width={56} height={56} />
           <p className="bento__aboutme-text">
