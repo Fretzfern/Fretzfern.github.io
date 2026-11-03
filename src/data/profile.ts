@@ -49,9 +49,9 @@ export const profile: Profile = {
   name: 'Fretz Fernandez',
   firstName: 'Fretz',
   handle: '@fretzfern',
-  role: 'SEO Specialist / WordPress Designer',
+  role: 'Senior SEO Specialist / WordPress Designer',
   avatarSrc: '/avatar.png',
-  verifiedLabel: 'Senior SEO Specialist, 7+ years of experience',
+  verifiedLabel: 'Senior SEO Specialist, 9 years of experience',
   email: 'fretzfern@gmail.com',
   location: 'Philippines',
   // Pick any icon from https://phosphoricons.com and import it above.
