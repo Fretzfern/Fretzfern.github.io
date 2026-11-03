@@ -56,7 +56,7 @@ export const profile: Profile = {
   location: 'Philippines',
   // Pick any icon from https://phosphoricons.com and import it above.
   stats: [
-    { value: '7+ yrs', label: 'In SEO', Icon: Briefcase },
+    { value: '9 yrs', label: 'In SEO', Icon: Briefcase },
     { value: 'GA4 · GSC', label: 'Analytics stack', Icon: SealCheck },
     { value: '2016', label: 'Working since', Icon: Clock },
   ],
