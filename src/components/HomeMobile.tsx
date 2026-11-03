@@ -54,7 +54,7 @@ const TILES = [
   { n: '02', label: 'Services', to: '/services', title: 'SEO and WordPress, end to end', desc: 'Audits, local SEO, schema, site builds.', Icon: Stack },
   { n: '03', label: 'Portfolio', to: '/portfolio', title: 'Websites and results', desc: 'Featured sites and result screenshots.', Icon: Coffee, accent: true },
   { n: '04', label: 'Experience', to: '/experience', title: 'Experience', desc: 'Where I have worked since 2016.', img: '/logos/canadian-web-designs.png' },
-  { n: '05', label: 'About', to: '/about', title: `Hi, I'm ${profile.firstName}.`, desc: 'Seven years of SEO and web design.', img: profile.avatarSrc },
+  { n: '05', label: 'About', to: '/about', title: `Hi, I'm ${profile.firstName}.`, desc: 'Nine years of SEO and web design.', img: profile.avatarSrc },
 ] as const
 
 export function HomeExplore() {
