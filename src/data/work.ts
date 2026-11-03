@@ -318,20 +318,21 @@ export const testimonials: Testimonial[] = [
     ],
   },
   {
-    headline: '5 out of 5 stars',
-    rating: 5,
-    quote: [
-      'We really appreciated Fretz's hard work and dedication in improving our SEO.', For the first time, we were able to see our organic listing appear on the first page of Google.',
-      'We are thankful for his efforts and the results he helped us achieve. His skills and quality of service are hard to find, and he would be a great asset to any company.',
-    ],
-    name: 'Shawn',
-    business: 'Brown Coach Line',
-    impact: [
-      { label: 'Growth', text: 'Achieved first-page visibility in Google's organic search results.' },
-      { label: 'Working together', text: 'Praised for dedication, hard work, and valuable SEO expertise.' },
-      { label: 'Verdict', text: 'Highly recommends Fretz for his SEO skills and professional service.' },
-   ],
-  },
+  headline: '5 out of 5 stars',
+  rating: 5,
+  quote: [
+    "We really appreciated Fretz's hard work and dedication in improving our SEO.",
+    "For the first time, we were able to see our organic listing appear on the first page of Google.",
+    "We are thankful for his efforts and the results he helped us achieve. His skills and quality of service are hard to find, and he would be a great asset to any company.",
+  ],
+  name: 'Shawn',
+  business: 'Brown Coach Line',
+  impact: [
+    { label: 'Growth', text: "Achieved first-page visibility in Google's organic search results." },
+    { label: 'Working together', text: 'Praised for dedication, hard work, and valuable SEO expertise.' },
+    { label: 'Verdict', text: 'Highly recommends Fretz for his SEO skills and professional service.' },
+  ],
+},
   {
     headline: '5 out of 5 stars',
     rating: 5,
