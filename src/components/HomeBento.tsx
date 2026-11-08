@@ -126,7 +126,7 @@ export default function HomeBento() {
         <div className="bento__media bento__aboutme">
           <img className="bento__aboutme-photo" src={profile.avatarSrc} alt="" width={56} height={56} />
           <p className="bento__aboutme-text">
-            I am Fretz, an SEO specialist and WordPress designer. I help businesses get found on Google with technical
+            I am Fretz, an Senior SEO specialist and WordPress designer. I help businesses get found on Google with technical
             SEO, local SEO and fast, custom WordPress sites.
           </p>
         </div>
