@@ -1,4 +1,4 @@
-/**
+r /**
  * YOUR IDENTITY - start here.
  *
  * Everything that says who you are lives in this file: name, handle, photo,
@@ -64,7 +64,7 @@ export const profile: Profile = {
   // Keep it short: two halves, 5-8 words total.
   displayName: { line1: 'Rank higher.', line2: 'Build better sites.' },
   hero: {
-    body: 'SEO specialist and WordPress designer helping businesses grow organic traffic and turn visits into leads.',
+    body: 'Senior SEO specialist and WordPress designer helping businesses grow organic traffic and turn visits into leads.',
     portraitSrc: '/avatar.png',
     portraitAlt: 'Portrait of Fretz Fernandez',
   },
