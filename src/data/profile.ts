@@ -1,4 +1,4 @@
-r /**
+/**
  * YOUR IDENTITY - start here.
  *
  * Everything that says who you are lives in this file: name, handle, photo,
