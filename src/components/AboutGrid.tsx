@@ -62,7 +62,7 @@ export default function AboutGrid() {
           {`Hi, I’m ${profile.firstName}.`}
         </h1>
         <p className="pgrid__lede">
-          SEO specialist and WordPress designer with over 9 years of experience.
+            Senior SEO specialist and WordPress designer with over 9 years of experience.
         </p>
       </header>
 
