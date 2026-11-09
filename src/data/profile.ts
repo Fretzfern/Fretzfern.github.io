@@ -72,5 +72,6 @@ export const profile: Profile = {
     { label: 'Facebook profile', href: 'https://www.facebook.com/Fretzified', iconPath: '/icons/facebook.svg' },
     { label: 'LinkedIn profile', href: 'https://www.linkedin.com/in/fretz-fernandez/', iconPath: '/icons/linkedin.svg' },
     { label: 'Discord profile', href: 'https://discord.com/users/1095240527655473154', iconPath: '/icons/discord.svg' },
+    { label: 'WhatsApp', href: 'https://wa.me/639949908218', iconPath: '/icons/whatsapp.svg' },
   ],
 }
