@@ -104,10 +104,11 @@ export default function ContactGrid() {
           </ul>
 
           <div className="cgrid__direct">
-            <a className="cgrid__mail" href="https://wa.me/639949908218" target="_blank" rel="noopener noreferrer">
-              <img src="/icons/whatsapp.svg" alt="" width={16} height={16} />
-              <span>+63 994 990 8218</span>
+            <a className="cgrid__mail" href={`mailto:${profile.email}`}>
+              <EnvelopeSimple size={16} weight="fill" aria-hidden="true" />
+              <span>{profile.email}</span>
             </a>
+            <a className="cgrid__mail" href="https://wa.me/639949908218" target="_blank" rel="noopener noreferrer">
             <ul className="cgrid__socials" role="list">
               {profile.socials.map((s) => (
                 <li key={s.label}>
