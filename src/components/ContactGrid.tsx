@@ -109,7 +109,7 @@ export default function ContactGrid() {
               <span>{profile.email}</span>
             </a>
             <a className="cgrid__mail" href="https://wa.me/639949908218" target="_blank" rel="noopener noreferrer">
-                 <img src="/icons/whatsapp.svg" alt="" width={16} height={16} />
+                 <img src="/icons/whatsapp-orange.svg" alt="" width={16} height={16} />
   <span>+63 994 990 8218</span>
 </a>
             <ul className="cgrid__socials" role="list">
