@@ -126,12 +126,13 @@ export const caseStudies: CaseStudy[] = [
       'Local map visibility: the pharmacy needed to appear in the Google Maps pack for "pharmacy" searches across downtown Toronto, not just at its own address.',
     ],
     solution: [
-      {
+            {
         title: 'Technical and on-page SEO',
         body: 'Standardized metadata, structured schema markup, and optimized site hierarchy for improved crawl efficiency.',
-        {
-  title: 'Google Business Profile and local map ranking',
-  body: 'Optimized the Business Profile (categories, services, descriptions and posts) and tracked "pharmacy" rankings on a 25-point map grid across downtown Toronto. The first scan showed the pharmacy visible on all 25 of 25 points, with an average position of 2.4 and a best position of 1.',
+      },
+      {
+        title: 'Google Business Profile and local map ranking',
+        body: 'Optimized the Business Profile (categories, services, descriptions and posts) and tracked "pharmacy" rankings on a 25-point map grid across downtown Toronto. The first scan showed the pharmacy visible on all 25 of 25 points, with an average position of 2.4 and a best position of 1.',
       },
       {
         title: 'Custom tracking infrastructure',
