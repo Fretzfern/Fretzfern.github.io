@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import ZoomImage from '@/components/ZoomImage'
+import { beforeAfter } from '@/data/before-after'
 import { caseStudies, testimonials } from '@/data/work'
 import '@/styles/work.css'
 
@@ -131,7 +132,19 @@ export default function CaseStudiesView() {
                 <p className="wk__p">{c.next}</p>
               </>
             )}
-
+            {beforeAfter[c.id] && (
+              <>
+                <h3 className="wk__h3">Before and after</h3>
+                <figure className="wk__shot">
+                  <ZoomImage
+                    src={beforeAfter[c.id].src}
+                    alt={beforeAfter[c.id].alt}
+                    title={c.client}
+                    detail={beforeAfter[c.id].alt}
+                  />
+                </figure>
+              </>
+            )}
             <div className={c.shots.length > 1 ? 'wk__shots wk__shots--multi' : 'wk__shots'}>
               {c.shots.map((s) => (
                 <figure className="wk__shot" key={s.src}>
