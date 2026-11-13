@@ -1,0 +1,44 @@
+@media (max-width: 1099px) {
+  .hcv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 0 20px;
+    border-radius: var(--radius-pill);
+    background: var(--orange);
+    color: #111111;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.35),
+      0 1px 2px rgba(12, 12, 12, 0.2),
+      0 10px 24px -10px rgba(255, 122, 26, 0.55);
+    transition:
+      opacity 620ms var(--ease-out),
+      transform 760ms var(--ease-out),
+      background var(--dur-fast) var(--ease-out);
+    transition-delay: 140ms, 140ms, 0s;
+  }
+  .hcv:active {
+    background: var(--orange-hover);
+    transform: scale(0.97);
+    transition-duration: 100ms;
+    transition-delay: 0s;
+  }
+  .hcv:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; }
+  .hcv svg { flex: none; }
+
+  /* Holds back during the intro, like the rest of Home (see boot.css) */
+  html.is-intro .hcv { opacity: 0; transform: translateY(14px); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html.is-intro .hcv { opacity: 1; transform: none; }
+    .hcv:active { transform: none; opacity: 0.85; }
+  }
+  @media (prefers-contrast: more) {
+    .hcv { box-shadow: inset 0 0 0 1px var(--line-strong); }
+  }
+}
