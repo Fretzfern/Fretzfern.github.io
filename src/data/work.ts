@@ -172,6 +172,7 @@ export const caseStudies: CaseStudy[] = [
       'Business Profile views and interactions were running 12% to 15% below the same months of 2025.',
       'Many airport terms ranked on page one but earned few clicks, with click-through rate holding at 0.9%.',
       'The backlink profile included low-quality bookmark and syndicated links that needed ongoing monitoring.',
+      'Local map visibility: appearing in the Google Maps pack for "taxi service halifax" across Halifax and Dartmouth, not only near the business address.',
     ],
     solution: [
       {
@@ -190,6 +191,10 @@ export const caseStudies: CaseStudy[] = [
         title: 'Analytics and technical',
         body: 'Reported monthly from GA4, Search Console and SE Ranking, and held the site audit at a health score of 95/100 across 198 pages.',
       },
+      {
+  title: 'Local map rank tracking',
+  body: 'Tracked "taxi service halifax" on a 25-point map grid covering Halifax and Dartmouth. The scan showed the business visible on all 25 of 25 points, with an average position of 3, a best position of 1 and 18 points in the top 3.',
+},
     ],
     results: [
       { value: '45 to 295', label: 'Conversions, August to September (GA4)' },
@@ -200,10 +205,12 @@ export const caseStudies: CaseStudy[] = [
       { value: '#1 (+24)', label: '"Scheduled airport pickup Halifax" ranking' },
       { value: '510 (+21)', label: 'Organic keywords' },
       { value: '95/100', label: 'Site health score' },
+      { value: '25/25', label: 'Local map grid points visible for "taxi service halifax" (average position 3, 72% in the top 3)' },
     ],
     next:
       'Over the last three months clicks and impressions eased (744 to 612 clicks) and average position moved from 11.9 to 14.3. The next round targets click-through with sharper titles and descriptions, pushing "Halifax airport transportation" from #6 into the top 3, and closing the year-on-year Business Profile gap with reviews and Maps-focused posts.',
     shots: [
+      { src: '/cases/ttt-gbp-map-rank.png', alt: 'Travel Time Taxi Google Business Profile local map rank for "taxi service halifax" across Halifax and Dartmouth: visible on 25 of 25 grid points, average position 3, best position 1, 72% in the top 3' },
       { src: '/cases/ttt-ga-august.jpg', alt: 'Travel Time Taxi Google Analytics overview, August 2026' },
       { src: '/cases/ttt-ga-september.jpg', alt: 'Travel Time Taxi Google Analytics overview, September 2026' },
       { src: '/cases/ttt-organic-august.jpg', alt: 'Travel Time Taxi organic traffic sources, August 2026' },
