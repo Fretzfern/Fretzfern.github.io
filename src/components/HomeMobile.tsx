@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
-import { SealCheck, CaretRight, Stack, Coffee } from '@/components/slab'
+import { SealCheck, CaretRight, Stack, Coffee, DownloadSimple } from '@/components/slab'
+import '@/styles/home-cv.css'
 import { profile } from '@/data/profile'
 import { testimonials } from '@/data/work'
 import QuickMenu from './QuickMenu'
