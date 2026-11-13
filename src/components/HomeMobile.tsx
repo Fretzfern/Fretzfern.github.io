@@ -36,15 +36,12 @@ export function HomeProfile() {
 
 export function HomeStats() {
   return (
-    <ul className="hstats" role="list">
-      {profile.stats.map(({ value, label, Icon }, i) => (
-        <li key={i}>
-          <Icon className="hstats__icon" size={18} weight="duotone" aria-hidden="true" />
-          <b className="hstats__value">{value}</b>
-          <span className="hstats__label">{label}</span>
-        </li>
-      ))}
-    </ul>
+    export function HomeCV() {
+  return (
+    <a className="hcv" href="/Fretz-Fernandez-CV.pdf" download="Fretz-Fernandez-CV.pdf">
+      <DownloadSimple size={18} weight="bold" aria-hidden="true" />
+      Download CV
+    </a>
   )
 }
 
