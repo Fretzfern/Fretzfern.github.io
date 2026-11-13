@@ -3,7 +3,7 @@ import { ArrowUpRight } from '@/components/slab'
 import { profile } from '@/data/profile'
 import ToolsMarquee from './ToolsMarquee'
 import HomeBento from './HomeBento'
-import { HomeProfile, HomeStats, HomeExplore } from './HomeMobile'
+import { HomeProfile, HomeStats, HomeCV, HomeExplore } from './HomeMobile'
 import { useScrollReveal } from '@/hooks/useScrollReveal'
 import { useIsPhone } from '@/hooks/useMediaQuery'
 
@@ -54,6 +54,7 @@ export default function Home() {
 
         <p className="home__lede">{hero.body}</p>
         {phone && <HomeStats />}
+        {phone && <HomeCV />}
       </div>
 
       {/* Two plates, not one. The tools band and the bento are different
