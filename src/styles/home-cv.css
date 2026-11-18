@@ -42,3 +42,35 @@
     .hcv { box-shadow: inset 0 0 0 1px var(--line-strong); }
   }
 }
+  .hsocial {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: opacity 620ms var(--ease-out), transform 760ms var(--ease-out);
+    transition-delay: 220ms;
+  }
+  .hsocial__link {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid var(--line-strong);
+    color: inherit;
+  }
+  .hsocial__link:active { transform: scale(0.94); }
+  .hsocial__link:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; }
+  .hsocial__icon {
+    width: 22px;
+    height: 22px;
+    background: currentColor;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
+  }
+  html.is-intro .hsocial { opacity: 0; transform: translateY(14px); }
+  @media (prefers-reduced-motion: reduce) {
+    html.is-intro .hsocial { opacity: 1; transform: none; }
+  }
