@@ -56,6 +56,19 @@ export function HomeCV() {
     </a>
   )
 }
+export function HomeSocials() {
+  return (
+    <ul className="hsocial" role="list" aria-label="Social profiles">
+      {profile.socials.map(({ label, href, iconPath }) => (
+        <li key={label}>
+          <a className="hsocial__link" href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
+            <span className="hsocial__icon" style={{ ['--icon-url' as string]: `url('${iconPath}')` }} aria-hidden="true" />
+          </a>
+        </li>
+      ))}
+    </ul>
+  )
+}
 
 const featured = testimonials.find((q) => q.teaser)
 
