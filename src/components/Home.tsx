@@ -55,6 +55,7 @@ export default function Home() {
         <p className="home__lede">{hero.body}</p>
         {phone && <HomeStats />}
         {phone && <HomeCV />}
+        {phone && <HomeSocials />}
       </div>
 
       {/* Two plates, not one. The tools band and the bento are different
