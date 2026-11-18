@@ -3,7 +3,7 @@ import { ArrowUpRight } from '@/components/slab'
 import { profile } from '@/data/profile'
 import ToolsMarquee from './ToolsMarquee'
 import HomeBento from './HomeBento'
-import { HomeProfile, HomeStats, HomeCV, HomeExplore } from './HomeMobile'
+import { HomeProfile, HomeStats, HomeCV, HomeSocials, HomeExplore } from './HomeMobile'
 import { useScrollReveal } from '@/hooks/useScrollReveal'
 import { useIsPhone } from '@/hooks/useMediaQuery'
 
