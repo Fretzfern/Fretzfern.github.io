@@ -177,3 +177,9 @@ export default function CaseStudiesView() {
                   ))}
               </div>
             )}
+                      </article>
+        ))}
+      </div>
+    </section>
+  )
+}
