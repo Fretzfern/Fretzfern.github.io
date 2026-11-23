@@ -5,6 +5,9 @@ import { beforeAfter } from '@/data/before-after'
 import { caseStudies, testimonials } from '@/data/work'
 import '@/styles/work.css'
 
+/** Map-rank grid screenshots get their own section (filename contains "gbp-map-rank"). */
+const isMapRank = (src: string) => src.includes('gbp-map-rank')
+
 /** /case-studies: five SEO case studies, each with its own result images. */
 export default function CaseStudiesView() {
   const { hash } = useLocation()
