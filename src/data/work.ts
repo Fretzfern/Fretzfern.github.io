@@ -57,6 +57,7 @@ export const caseStudies: CaseStudy[] = [
       { value: '99/100', label: 'Website health score' },
     ],
     shots: [
+      { src: '/cases/kratom-gbp-map-rank.png', alt: 'Kratom Delivery Canada Google Business Profile local map rank across Toronto and the GTA: 3x3 grid, 5 km, average position 3, best position 1, worst position 6, visible on 9 of 9 points' },
       { src: '/work/cs-kratom-dashboard.jpg', alt: 'Kratom Delivery Canada SEO results dashboard' },
       { src: '/work/cs-kratom-gsc.jpg', alt: 'Google Search Console performance for Kratom Delivery Canada' },
       { src: '/work/cs-kratom-ga4.jpg', alt: 'Google Analytics overview for Kratom Delivery Canada' },
