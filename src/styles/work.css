@@ -132,7 +132,7 @@
 @media (min-width: 900px) { .wk__shots--multi { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 /* GBP local map rank report: smaller thumbnails (click still opens the full-size zoom). */
 .wk__h3 + .wk__shots {
-  grid-template-columns: repeat(auto-fit, minmax(180px, 280px));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 340px));
   justify-content: start;
   gap: 10px;
 }
