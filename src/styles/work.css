@@ -139,3 +139,15 @@
 /* Cropped report screenshots */
 .wk__report-media { display: grid; gap: 8px; padding: 12px 12px 0; }
 .wk__report-media .zi { border-radius: 10px; box-shadow: 0 0 0 1px var(--line); }
+/* Colored download button for the full Local Ranking Report */
+.wk__btn--cta {
+  background: var(--orange-ink);
+  border-color: var(--orange-ink);
+  color: #fff;
+  padding: 12px 22px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+.wk__btn--cta:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+}
