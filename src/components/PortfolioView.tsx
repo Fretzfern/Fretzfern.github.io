@@ -1,6 +1,13 @@
 import ZoomImage from '@/components/ZoomImage'
-import { CV_URL, featuredSites, reportGroups, sampleImage, sampleProjects } from '@/data/work'
+import { caseStudies, CV_URL, featuredSites, reportGroups, sampleImage, sampleProjects } from '@/data/work'
 import '@/styles/work.css'
+
+/** Every GBP local map rank screenshot from the case studies, with its client name. */
+const mapRankShots = caseStudies.flatMap((c) =>
+  c.shots
+    .filter((s) => s.src.includes('gbp-map-rank'))
+    .map((s) => ({ ...s, client: c.client })),
+)
 
 /** /portfolio: websites worked on, the full sample list, and result screenshots. */
 export default function PortfolioView() {
