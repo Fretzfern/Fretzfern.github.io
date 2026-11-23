@@ -1,13 +1,18 @@
 import ZoomImage from '@/components/ZoomImage'
+import { reportPdfs } from '@/data/report-pdfs'
 import { caseStudies, CV_URL, featuredSites, reportGroups, sampleImage, sampleProjects } from '@/data/work'
 import '@/styles/work.css'
 
-/** Every GBP local map rank screenshot from the case studies, with its client name. */
-const mapRankShots = caseStudies.flatMap((c) =>
+const isMapRank = (src: string) => src.includes('gbp-map-rank')
+
+/** Every case-study screenshot that is about the Google Business Profile. */
+const gbpShots = caseStudies.flatMap((c) =>
   c.shots
-    .filter((s) => s.src.includes('gbp-map-rank'))
+    .filter((s) => /business profile/i.test(s.alt))
     .map((s) => ({ ...s, client: c.client })),
 )
+const mapRankShots = gbpShots.filter((s) => isMapRank(s.src))
+const profileShots = gbpShots.filter((s) => !isMapRank(s.src))
 
 /** /portfolio: websites worked on, the full sample list, and result screenshots. */
 export default function PortfolioView() {
@@ -54,20 +59,42 @@ export default function PortfolioView() {
       </div>
 
       <div className="wk__card">
-  <h2 className="wk__card-title">Local map rank reports (Google Business Profile)</h2>
+  <h2 className="wk__card-title">Google Business Profile</h2>
   <p className="wk__p">
-    Map grid scans showing where each business appears in Google Maps across its service area. Select any image to enlarge it.
+    Local map rankings and profile performance for my clients. Select any image to enlarge it.
   </p>
-  <ul className="wk__gallery">
-    {mapRankShots.map((s) => (
-      <li className="wk__site" key={s.src}>
-        <ZoomImage src={s.src} alt={s.alt} title={s.client} detail={s.alt} />
-        <span className="wk__site-name">{s.client}</span>
-      </li>
-    ))}
-  </ul>
+
+  <section className="wk__group" aria-label="Local map rank reports">
+    <h3 className="wk__h3">Local map rank reports</h3>
+    <ul className="wk__gallery">
+      {mapRankShots.map((s) => (
+        <li className="wk__site" key={s.src}>
+          <ZoomImage src={s.src} alt={s.alt} title={s.client} detail={s.alt} />
+          <span className="wk__site-name">{s.client}</span>
+        </li>
+      ))}
+    </ul>
+    <div className="wk__actions">
+      {Object.entries(reportPdfs).map(([id, r]) => (
+        <a className="wk__btn wk__btn--cta" key={id} href={r.href} target="_blank" rel="noopener noreferrer">
+          View {caseStudies.find((c) => c.id === id)?.client ?? id} report (PDF)
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section className="wk__group" aria-label="Profile performance">
+    <h3 className="wk__h3">Profile views, searches and interactions</h3>
+    <ul className="wk__gallery">
+      {profileShots.map((s) => (
+        <li className="wk__site" key={s.src}>
+          <ZoomImage src={s.src} alt={s.alt} title={s.client} detail={s.alt} />
+          <span className="wk__site-note">{s.alt}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
 </div>
-      
       <div className="wk__card">
         <h2 className="wk__card-title">Reports and analytics</h2>
         <p className="wk__p">
