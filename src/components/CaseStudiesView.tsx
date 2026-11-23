@@ -162,12 +162,21 @@ export default function CaseStudiesView() {
                     ))}
                 </div>
                 {reportPdfs[c.id] && (
-                  <p className="wk__p">
-                    <a href={reportPdfs[c.id].href} target="_blank" rel="noopener noreferrer">
-                      {reportPdfs[c.id].label}
-                    </a>
-                  </p>
-                )}
+  <div className="wk__actions">
+    <a
+      className="wk__btn wk__btn--cta"
+      href={reportPdfs[c.id].href}
+      target="_blank"
+      rel="noopener noreferrer"
+      download
+    >
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16" />
+      </svg>
+      {reportPdfs[c.id].label}
+    </a>
+  </div>
+)}
               </>
             )}
             {c.shots.some((s) => !isMapRank(s.src)) && (
