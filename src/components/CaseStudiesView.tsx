@@ -148,16 +148,32 @@ export default function CaseStudiesView() {
                 </figure>
               </>
             )}
-            <div className={c.shots.length > 1 ? 'wk__shots wk__shots--multi' : 'wk__shots'}>
-              {c.shots.map((s) => (
-                <figure className="wk__shot" key={s.src}>
-                  <ZoomImage src={s.src} alt={s.alt} title={c.client} detail={s.alt} />
-                </figure>
-              ))}
-            </div>
-          </article>
-        ))}
-      </div>
-    </section>
-  )
-}
+                        {c.shots.some((s) => isMapRank(s.src)) && (
+              <>
+                <h3 className="wk__h3">Local map rank report (Google Business Profile)</h3>
+                <div className="wk__shots">
+                  {c.shots
+                    .filter((s) => isMapRank(s.src))
+                    .map((s) => (
+                      <figure className="wk__shot" key={s.src}>
+                        <ZoomImage src={s.src} alt={s.alt} title={c.client} detail={s.alt} />
+                      </figure>
+                    ))}
+                </div>
+              </>
+            )}
+            {c.shots.some((s) => !isMapRank(s.src)) && (
+              <div
+                className={
+                  c.shots.filter((s) => !isMapRank(s.src)).length > 1 ? 'wk__shots wk__shots--multi' : 'wk__shots'
+                }
+              >
+                {c.shots
+                  .filter((s) => !isMapRank(s.src))
+                  .map((s) => (
+                    <figure className="wk__shot" key={s.src}>
+                      <ZoomImage src={s.src} alt={s.alt} title={c.client} detail={s.alt} />
+                    </figure>
+                  ))}
+              </div>
+            )}
