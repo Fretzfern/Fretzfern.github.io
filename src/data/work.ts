@@ -77,6 +77,10 @@ export const caseStudies: CaseStudy[] = [
     ],
     solution: [
       {
+  title: 'Local map rank tracking',
+  body: 'Tracked eight roofing searches on a 3x3 map grid across St. Catharines (5 km). The business is visible on all 9 of 9 points, with an average position of 4 and a best position of 1, and ranks #2 of the top 20 local roofers behind JD Roofing Inc.',
+},
+      {
         title: 'Core Web Vitals and technical overhaul',
         body: 'Corrected indexing issues, optimized structured data, and fixed broken or suspicious links, clearing all 14 audit errors and lifting the health score from 84 to 87.',
       },
@@ -90,6 +94,8 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
     results: [
+      { value: '9/9', label: 'Local map grid points visible (average position 4, best position 1)' },
+      { value: '227 vs 34', label: 'Reviews compared with the competitor average' },
       { value: '14 to 0', label: 'Critical site errors in the audit' },
       { value: '84 to 87', label: 'Site health score' },
       { value: '169 to 81', label: 'Audit warnings (112 fixed)' },
