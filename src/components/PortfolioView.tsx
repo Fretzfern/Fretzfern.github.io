@@ -54,6 +54,21 @@ export default function PortfolioView() {
       </div>
 
       <div className="wk__card">
+  <h2 className="wk__card-title">Local map rank reports (Google Business Profile)</h2>
+  <p className="wk__p">
+    Map grid scans showing where each business appears in Google Maps across its service area. Select any image to enlarge it.
+  </p>
+  <ul className="wk__gallery">
+    {mapRankShots.map((s) => (
+      <li className="wk__site" key={s.src}>
+        <ZoomImage src={s.src} alt={s.alt} title={s.client} detail={s.alt} />
+        <span className="wk__site-name">{s.client}</span>
+      </li>
+    ))}
+  </ul>
+</div>
+      
+      <div className="wk__card">
         <h2 className="wk__card-title">Reports and analytics</h2>
         <p className="wk__p">
           Screenshots from the tools I work in every day, each with what it shows, what I did, and the improvement.
