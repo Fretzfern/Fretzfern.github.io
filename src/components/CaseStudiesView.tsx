@@ -161,17 +161,17 @@ export default function CaseStudiesView() {
                       </figure>
                     ))}
                 </div>
-                {reportPdfs[c.id] && (
+               {reportPdfs[c.id] && (
   <div className="wk__actions">
     <a
       className="wk__btn wk__btn--cta"
       href={reportPdfs[c.id].href}
       target="_blank"
       rel="noopener noreferrer"
-      download
     >
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16" />
+        <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" />
+        <circle cx="12" cy="12" r="3" />
       </svg>
       {reportPdfs[c.id].label}
     </a>
