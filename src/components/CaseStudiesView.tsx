@@ -1,3 +1,4 @@
+import { reportPdfs } from '@/data/report-pdfs'
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import ZoomImage from '@/components/ZoomImage'
