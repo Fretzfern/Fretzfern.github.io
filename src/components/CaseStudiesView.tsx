@@ -161,14 +161,14 @@ export default function CaseStudiesView() {
                       </figure>
                     ))}
                 </div>
-              </>
-                            {reportPdfs[c.id] && (
+                {reportPdfs[c.id] && (
                   <p className="wk__p">
                     <a href={reportPdfs[c.id].href} target="_blank" rel="noopener noreferrer">
                       {reportPdfs[c.id].label}
                     </a>
                   </p>
                 )}
+              </>
             )}
             {c.shots.some((s) => !isMapRank(s.src)) && (
               <div
