@@ -103,6 +103,7 @@ export const caseStudies: CaseStudy[] = [
     next:
       'Search Console clicks eased from 176 to 126 over the month and average position slipped from 16 to 18.5, as "roofing st catharines" and related terms dropped one or two places and Business Profile search appearances fell from 160 to 16. The next round recovers the core local service pages, rewrites titles and descriptions to lift the 0.4% click-through rate, adds internal links to lift Page Trust (13), and refreshes Business Profile posts, photos and citations.',
     shots: [
+      { src: '/cases/ajt-gbp-map-rank.png', alt: 'AJT Roofing and Contracting Google Business Profile local map rank across St. Catharines: 3x3 grid, 5 km, average position 4, best position 1, worst position 9, visible on 9 of 9 points' },
       { src: '/cases/ajt-crawl-comparison.jpg', alt: 'AJT Roofing site audit comparison: errors cleared from 14 to 0' },
       { src: '/cases/ajt-top-keywords.jpg', alt: 'AJT Roofing top, jumped and dropped keywords' },
       { src: '/cases/ajt-gbp-october.jpg', alt: 'AJT Roofing Business Profile interactions, October 2025' },
