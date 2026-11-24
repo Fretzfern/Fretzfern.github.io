@@ -59,58 +59,149 @@ const WP = '/icons/tools/wp.svg'
 const WOO = '/icons/tools/woo.svg'
 const CODE = '/icons/tools/css.svg'
 
+type Tool = { name: string; icon?: string }
+
+const tool = (name: string, icon?: string): Tool => ({
+  name,
+  icon: icon ? `/icons/tools/${icon}.svg` : undefined,
+})
+
+/** Every tool, defined once. Skills below pick from this list. */
+const T = {
+  seranking: tool('SE Ranking', 'seranking'),
+  ahrefs: tool('Ahrefs', 'ahrefs'),
+  semrush: tool('Semrush', 'semrush'),
+  ubersuggest: tool('Ubersuggest', 'ubersuggest'),
+  moz: tool('Moz Pro', 'moz'),
+  frog: tool('Screaming Frog', 'screamingfrog'),
+  psi: tool('PageSpeed Insights', 'psi'),
+  gsc: tool('Search Console', 'gsc'),
+  ga4: tool('Google Analytics 4', 'ga4'),
+  gtm: tool('Tag Manager', 'gtm'),
+  gbp: tool('Business Profile', 'gbp'),
+  kwp: tool('Keyword Planner', 'keywordplanner'),
+  surfer: tool('Surfer SEO', 'surfer'),
+  yoast: tool('Yoast SEO', 'yoast'),
+  rankmath: tool('Rank Math'),
+  brightlocal: tool('BrightLocal', 'brightlocal'),
+  gridmb: tool('Grid My Business'),
+  schema: tool('Schema markup', 'schema'),
+  wp: tool('WordPress', 'wp'),
+  woo: tool('WooCommerce', 'woo'),
+  shopify: tool('Shopify', 'shopify'),
+  wix: tool('Wix', 'wix'),
+  css: tool('HTML & CSS', 'css'),
+  chatgpt: tool('ChatGPT', 'chatgpt'),
+  gemini: tool('Gemini', 'gemini'),
+  claude: tool('Claude', 'claude'),
+  perplexity: tool('Perplexity', 'perplexity'),
+}
+
 type Service = {
-  index: string
   title: string
   description: string
   chip: string
+  /** The marks in the card header. */
   logos: string[]
   bullets: string[]
+  /** Shown in their own "Tools" row under the bullets. */
+  tools: Tool[]
 }
-
 
 const SERVICES: Service[] = [
   {
-    index: '01',
-    title: 'Technical SEO audits',
+    title: 'Technical optimization',
     description: 'Find and fix what holds your site back in search.',
-    chip: 'SEO',
+    chip: 'Technical',
     logos: [SEO, GSC],
-    bullets: ['Site errors and architecture', 'Core Web Vitals', 'Actionable reporting'],
+    bullets: ['Site audits and crawl errors', 'Indexing, sitemaps and architecture', 'Core Web Vitals and page speed'],
+    tools: [T.frog, T.seranking, T.psi, T.gsc],
   },
   {
-    index: '02',
+    title: 'On-page SEO',
+    description: 'Make every page clear to search engines and visitors.',
+    chip: 'On-page',
+    logos: [SEO, WP],
+    bullets: ['Titles, meta descriptions and headings', 'Internal links and page structure', 'Image and content optimization'],
+    tools: [T.yoast, T.rankmath, T.surfer, T.gsc],
+  },
+  {
+    title: 'Off-page SEO',
+    description: 'Build the authority and trust that lift rankings.',
+    chip: 'Off-page',
+    logos: [SEO],
+    bullets: ['Business listings and directories', 'Guest posting and PDF submissions', 'Authority and backlink monitoring'],
+    tools: [T.ahrefs, T.moz, T.seranking, T.semrush],
+  },
+  {
+    title: 'Link building',
+    description: 'Earn quality links and keep the profile clean.',
+    chip: 'Links',
+    logos: [SEO],
+    bullets: ['High-authority link-building campaigns', 'Backlink audits and toxicity checks', 'Disavow files and link monitoring'],
+    tools: [T.ahrefs, T.seranking, T.moz, T.semrush],
+  },
+  {
+    title: 'Local SEO',
+    description: 'Get found by customers in your area.',
+    chip: 'Local',
+    logos: [GBP, SEO],
+    bullets: ['Google Business Profile optimization', 'Local citations and reputation', 'Local map rank tracking'],
+    tools: [T.gbp, T.brightlocal, T.gridmb],
+  },
+  {
+    title: 'Keyword research',
+    description: 'Find the searches that bring in the right visitors.',
+    chip: 'Research',
+    logos: [SEO],
+    bullets: ['Search intent and long-tail keywords', 'Competitor keyword gaps', 'Keyword mapping to pages'],
+    tools: [T.kwp, T.ahrefs, T.semrush, T.ubersuggest],
+  },
+  {
+    title: 'WordPress design',
+    description: 'Custom, responsive sites that load fast and convert.',
+    chip: 'WordPress',
+    logos: [WP, WOO, CODE],
+    bullets: ['Custom-coded layouts', 'WooCommerce stores', 'Wix and Shopify site management'],
+    tools: [T.wp, T.woo, T.shopify, T.wix, T.css],
+  },
+  {
+    title: 'Content optimization: AEO / GEO',
+    description: 'Content written to rank and to be quoted in AI answers.',
+    chip: 'Content',
+    logos: [SEO, WP],
+    bullets: ['Content refreshes for search intent', 'Answer-style content for AI Overviews (AEO)', 'Tracking AI visibility in ChatGPT, Gemini and Perplexity (GEO)'],
+    tools: [T.surfer, T.chatgpt, T.gemini, T.claude, T.perplexity],
+  },
+  {
     title: 'Schema & tracking',
     description: 'Structured data and clean measurement setup.',
     chip: 'Analytics',
     logos: [SCHEMA, GA4, GTM],
     bullets: ['Schema markup', 'GTM event tracking', 'GA4 and GSC integration'],
+    tools: [T.schema, T.gtm, T.ga4, T.gsc],
   },
   {
-    index: '03',
-    title: 'Local SEO',
-    description: 'Get found by customers in your area.',
-    chip: 'Local',
-    logos: [GBP, SEO],
-    bullets: ['Google Business Profile', 'Local citations', 'Reputation management'],
+    title: 'Organic social media optimization',
+    description: 'Consistent, scheduled posts that support your brand.',
+    chip: 'Social',
+    logos: [SEO],
+    bullets: ['Social media posting and scheduling', 'Profile and post optimization', 'Graphics and promotional visuals'],
+    // Platforms come from the Fraserlife sample. Add your scheduling tool
+    // here (for example { name: 'Buffer' }) once you tell me which you used.
+    tools: [{ name: 'Facebook' }, { name: 'Instagram' }, { name: 'LinkedIn' }, { name: 'YouTube' }],
   },
   {
-    index: '04',
-    title: 'WordPress design',
-    description: 'Custom, responsive sites that load fast and convert.',
-    chip: 'WordPress',
-    logos: [WP, WOO, CODE],
-    bullets: ['Custom-coded layouts', 'WooCommerce stores', 'Speed and security upkeep'],
-  },
-    {
-    index: '05',
-    title: 'Content & social media',
-    description: 'Optimized content, visuals and scheduled posts for your brand.',
-    chip: 'Content',
-    logos: [SEO, WP],
-    bullets: ['Content optimization', 'Social media posting and scheduling', 'Graphics and promotional materials'],
+    title: 'Monitoring & reporting',
+    description: 'Clear numbers every month, with next steps.',
+    chip: 'Reporting',
+    logos: [GA4, GSC],
+    bullets: ['Monthly performance reports', 'Rank, traffic and conversion tracking', 'Local map rank reports'],
+    tools: [T.ga4, T.gsc, T.seranking, T.gridmb],
   },
 ]
+
+const pad = (n: number) => String(n).padStart(2, '0')
 
 /** The tool marks, stacked horizontally on white tiles (same as Projects). */
 function Marks({ logos }: { logos: string[] }) {
