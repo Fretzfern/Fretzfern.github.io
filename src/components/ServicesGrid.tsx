@@ -310,7 +310,8 @@ export default function ServicesGrid() {
                 </div>
               </li>
             ))}
-                            </div>
+                  </ul>
+                </div>
               </li>
             ))}
           </ul>
