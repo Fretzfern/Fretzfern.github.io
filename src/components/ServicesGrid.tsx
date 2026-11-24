@@ -102,13 +102,13 @@ const SERVICES: Service[] = [
     logos: [WP, WOO, CODE],
     bullets: ['Custom-coded layouts', 'WooCommerce stores', 'Speed and security upkeep'],
   },
-  {
+    {
     index: '05',
-    title: 'Content & graphics',
-    description: 'Optimized content and visuals for your brand.',
+    title: 'Content & social media',
+    description: 'Optimized content, visuals and scheduled posts for your brand.',
     chip: 'Content',
     logos: [SEO, WP],
-    bullets: ['Content optimization', 'Social media graphics', 'Promotional materials'],
+    bullets: ['Content optimization', 'Social media posting and scheduling', 'Graphics and promotional materials'],
   },
 ]
 
