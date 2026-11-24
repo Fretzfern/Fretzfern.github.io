@@ -306,11 +306,7 @@ export default function ServicesGrid() {
                         {t.name}
                       </li>
                     ))}
-                  </ul>
-                </div>
-              </li>
-            ))}
-                  </ul>
+                                   </ul>
                 </div>
               </li>
             ))}
