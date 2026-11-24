@@ -276,12 +276,14 @@ export default function ServicesGrid() {
             <p className="sgrid__offers-sub">Pick one, or combine them.</p>
           </div>
           <ul className="bento sgrid__services" role="list">
-            {SERVICES.map((s) => (
+                        {SERVICES.map((s, i) => (
               <li key={s.title} className="bento__card sgrid__service">
                 <span className="bento__head">
                   <span className="sgrid__service-top">
                     <Marks logos={s.logos} />
-                    <span className="sgrid__service-index" aria-hidden="true">{s.index} / 05</span>
+                    <span className="sgrid__service-index" aria-hidden="true">
+                      {pad(i + 1)} / {pad(SERVICES.length)}
+                    </span>
                   </span>
                   <span className="bento__title">{s.title}</span>
                   <span className="bento__desc">{s.description}</span>
@@ -295,11 +297,16 @@ export default function ServicesGrid() {
                     </li>
                   ))}
                 </ul>
+                <div className="sgrid__tools-wrap">
+                  <span className="sgrid__tools-label">Tools</span>
+                  <ul className="sgrid__tools" role="list" aria-label={`Tools for ${s.title}`}>
+                    {s.tools.map((t) => (
+                      <li key={t.name} className="sgrid__tool">
+                        {t.icon && <img src={t.icon} alt="" width={14} height={14} loading="lazy" decoding="async" />}
+                        {t.name}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </li>
             ))}
-          </ul>
-        </div>
-      </div>
-    </section>
-  )
-}
