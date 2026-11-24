@@ -457,9 +457,9 @@ export const roles: Role[] = [
     company: 'Volfyre Digital Marketing',
     years: '2019 - 2023',
     logo: '/logos/volfyre.png',
-    body: 'WordPress web design and graphic design alongside full-lifecycle SEO: technical audits, local citations, and Core Web Vitals optimization. Built fully responsive, custom-coded WordPress sites and designed visual assets that increased brand engagement across client campaigns.',
+    body: 'WordPress web design and graphic design alongside full-lifecycle SEO: technical audits, local citations, and Core Web Vitals optimization. Built fully responsive, custom-coded WordPress sites and designed visual assets that increased brand engagement across client campaigns. Handled social media posting and post scheduling for client accounts.',
   },
-  {
+    {
     title: 'Junior SEO / Graphic Designer',
     company: 'JNB Web Promotion',
     years: '2016 - 2019',
