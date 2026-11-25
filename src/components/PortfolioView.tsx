@@ -1,6 +1,6 @@
 import ZoomImage from '@/components/ZoomImage'
 import { reportPdfs } from '@/data/report-pdfs'
-import { caseStudies, CV_URL, featuredSites, reportGroups, sampleImage, sampleProjects } from '@/data/work'
+import { caseStudies, CV_URL, featuredSites, reportGroups, sampleImage, sampleProjects, siteHealthAudits } from '@/data/work'
 import '@/styles/work.css'
 
 const isMapRank = (src: string) => src.includes('gbp-map-rank')
@@ -95,6 +95,27 @@ export default function PortfolioView() {
     </ul>
   </section>
 </div>
+
+<div className="wk__card">
+  <h2 className="wk__card-title">Technical optimization: site health</h2>
+  <p className="wk__p">
+    Site audit results before and after technical fixes. Select an image to enlarge it.
+  </p>
+  <ul className="wk__gallery wk__audits">
+    {siteHealthAudits.map((a) => (
+      <li className="wk__site" key={a.src}>
+        <ZoomImage src={a.src} alt={a.alt} title={a.client} detail={a.period} />
+        <span className="wk__site-name">{a.client}</span>
+        <span className="wk__site-note">
+          Health score {a.score[0]} to {a.score[1]} · Errors {a.errors[0]} to {a.errors[1]} · Warnings {a.warnings[0]} to {a.warnings[1]}
+        </span>
+        <span className="wk__site-note">{a.period}</span>
+      </li>
+    ))}
+  </ul>
+</div>
+
+      
       <div className="wk__card">
         <h2 className="wk__card-title">Reports and analytics</h2>
         <p className="wk__p">
