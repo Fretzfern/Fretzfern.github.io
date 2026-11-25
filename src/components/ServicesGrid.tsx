@@ -273,7 +273,6 @@ export default function ServicesGrid() {
         <div className="sgrid__offers">
           <div className="sgrid__offers-head">
             <h2 className="sgrid__offers-title">What I can do for you.</h2>
-            <p className="sgrid__offers-sub">Pick one, or combine them.</p>
           </div>
           <ul className="bento sgrid__services" role="list">
                         {SERVICES.map((s, i) => (
