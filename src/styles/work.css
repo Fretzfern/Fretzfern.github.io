@@ -151,3 +151,4 @@
   filter: brightness(1.08);
   transform: translateY(-2px);
 }
+.wk__audits { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
