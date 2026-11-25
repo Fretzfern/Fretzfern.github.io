@@ -641,3 +641,46 @@ export const reportGroups: ReportGroup[] = [
     ],
   },
 ]
+/* ---------- Technical optimization: site health audits ---------- */
+
+export type SiteHealthAudit = {
+  client: string
+  src: string
+  alt: string
+  score: [number, number]
+  errors: [number, number]
+  warnings: [number, number]
+  notices: [number, number]
+  period: string
+}
+
+export const siteHealthAudits: SiteHealthAudit[] = [
+  {
+    client: 'Brown Coach Line',
+    src: '/cases/brown-coach-line-site-health-audit.jpg',
+    alt: 'Brown Coach Line site audit comparison: health score 87 to 98, errors 7 to 3, warnings 43 to 1, notices 133 to 2',
+    score: [87, 98], errors: [7, 3], warnings: [43, 1], notices: [133, 2],
+    period: 'Nov 24, 2025 to Oct 29, 2026',
+  },
+  {
+    client: 'Cloud Pharmacy',
+    src: '/cases/cloud-pharmacy-site-health-audit.jpg',
+    alt: 'Cloud Pharmacy site audit comparison: health score 91 to 100, errors 19 to 0, warnings 95 to 0, notices 34 to 10',
+    score: [91, 100], errors: [19, 0], warnings: [95, 0], notices: [34, 10],
+    period: 'Nov 24, 2025 to Oct 22, 2026',
+  },
+  {
+    client: 'Travel Time Taxi',
+    src: '/cases/ttt-site-health-audit.jpg',
+    alt: 'Travel Time Taxi site audit comparison: health score 88 to 95, errors 34 to 2, warnings 71 to 11, notices 485 to 0',
+    score: [88, 95], errors: [34, 2], warnings: [71, 11], notices: [485, 0],
+    period: 'Nov 24, 2025 to Oct 5, 2026',
+  },
+  {
+    client: 'Kratom Delivery Canada',
+    src: '/cases/kratom-site-health-audit.jpg',
+    alt: 'Kratom Delivery Canada site audit comparison: health score 91 to 95, errors 2 to 0, warnings 35 to 9, notices 133 to 4',
+    score: [91, 95], errors: [2, 0], warnings: [35, 9], notices: [133, 4],
+    period: 'Nov 24, 2025 to Aug 3, 2026',
+  },
+]
