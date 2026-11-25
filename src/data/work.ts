@@ -164,7 +164,7 @@ export const caseStudies: CaseStudy[] = [
       { value: '25/25', label: 'Local map grid points visible for "pharmacy" (average position 2.4)' },
     ],
     shots: [
-      { src: '/work/cs-pharmacy-dashboard.jpg', alt: 'Cloud Pharmacy SEO and analytics performance overview' },
+      { src: '/work/cs-pharmacy-dashboard-v2.jpg', alt: 'Cloud Pharmacy SEO and analytics performance overview' },
       { src: '/cases/cloud-pharmacy-gbp-map-rank.png', alt: 'Cloud Pharmacy Google Business Profile local map rank for "pharmacy" in downtown Toronto: visible on 25 of 25 grid points, average position 2.4, best position 1' },
       { src: '/cases/cloud-pharmacy-before-after.png', alt: 'Cloud Pharmacy before and after: clicks 396 to 1.3K, impressions 94.3K to 302.1K, average position 19.4 to 8.9' },
     ],
